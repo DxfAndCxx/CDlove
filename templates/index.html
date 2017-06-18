@@ -1,0 +1,2260 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>婚礼纪</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="">
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,  user-scalable=0,,minimal-ui" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="email=no" name="format-detection" />
+  <link rel="stylesheet" href="/p/wedding/Public/wap/static/css/wrap_common.css">
+  <link rel="stylesheet" href="//ocafkzd89.qnssl.com/animate_v05.28.css">
+  <link rel="icon" href="http://qnm.hunliji.com/o_1ah8sh0g58hqcgc1sfm1clv1t34c.ico" type="image/x-icon">
+
+  <style>
+   body {background:#000}
+    #wrap {margin:auto;}
+      .wrap-main {position:relative;}
+      .wrap-main img {width:100%;}
+        .lay-slide {position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;-webkit-transition-duration:600ms;-webkit-transform-origin: top center;overflow:hidden;}
+          .lay-slide-bg {position:absolute;top:0;left:0;width:100%;height:100%;}
+          .lay-slide-cont {margin:auto;position:relative;-webkit-transition-duration:600ms;display:none;}
+            .icon {position:absolute;z-index:1;}
+
+            .feedback_bg,.feedback_adv,.feedback_dis,.feedback_info,.feedback_msg {position:absolute;overflow:hidden;}
+            .feedback_bg {width:76.67%;}
+            .feedback_adv {width:22.27%;}
+            .feedback_dis {width:67.33%;line-height:20px;font-size:13px;color:#868686;text-decoration:underline;text-align:justify;}
+            .feedback_info {padding:10px;padding-top:0;width:67.33%;font-size:13px;-webkit-box-sizing:border-box;z-index:999;}
+            .feed_bd {float:left;width:80%;}
+                .feedback_info_name,.feedback_info_status,.feedback_info_num {position:relative;padding-top:10px;padding-bottom:6px;overflow:hidden;}
+                .wline {position:absolute;bottom:0;left:0;width:100%;background:#c9c9c9;}
+                .feedback_info_name {}
+                    .feedback_info_name em {color:#666;}
+                    .feedback_info_name input {float:right;width:45%;text-align:right;border:0;background:transparent;text-align:center;}
+                .feedback_info_status {}
+                    .feedback_info_status em {color:#666;}
+                .feedback_info_num {}
+                    .feedback_info_num em {color:#666;}
+                    .feedstatus{float:right;color:#868686;width:45%;text-align:center;}
+            #playBtn {display:none;position:fixed;top:15px;right:15px;width:36px;opacity:.6;z-index:99999;}
+             #playBtn img {width:100%;}
+             /*.playing {-webkit-animation:rotate 3s linear infinite;}*/
+             /*.rotate {animation-play-state:running;}*/
+
+             .rotate {-webkit-animation:player 3s infinite linear}
+             @keyframes player{
+              0%{
+                -webkit-transform:rotate(0deg);
+                }to{
+                  -webkit-transform:rotate(1turn);
+                }
+            }
+
+            .status_more,.num_more {float:right;width:18px;height:18px;background:#666;border-radius:30px;}
+            .feedback_msg {width:67.33%;z-index:999}
+                .feedback_msg h3 {padding:0 10px;color:#666;}
+                .feedback_msg_txt {padding:10px;margin-top:8px;background:#fbf8f0;}
+                    #msg_textarea {width:100%;height:36px;line-height:18px;border:0;background:transparent;color:#333;}
+                    .ajaxBtn {margin-top:10px;overflow:hidden;}
+                        .ajaxBtn a {width:46%;padding:8px 0;text-align:center;background:#ddd;color:#fff;}
+                        .ajaxBtn a:nth-child(1){float:left;}
+                        .ajaxBtn a:nth-child(2){float:right;}
+
+                .loadmore-loading{position:fixed;top:0;left:0;bottom:0;right:0;margin:auto;display:inline-block;height:24px;width:24px;border-radius:50%;-webkit-animation:rotate .75s linear infinite;z-index:999;}
+                    .loadmore-loading div {position:absolute;top:-3px;left:-3px;width:100%;height:100%;border:3px solid #ff705e;border-radius:50%;border-top-color:transparent;vertical-align:middle;opacity:.8}
+                    .loadmore-loading p {display:none;position:absolute;top:-3px;left:-3px;width:100%;height:100%;border:3px solid #ff705e;border-radius:50%;vertical-align:middle;border-top-color:transparent;border-left-color:transparent;border-right-color:transparent;}
+                @-webkit-keyframes rotate{
+                  0%{-webkit-transform:rotate(0deg);}
+                  50%{-webkit-transform:rotate(180deg);}
+                  100%{-webkit-transform:rotate(360deg);}
+                }
+                @keyframes rotate{
+                  0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+                  50%{-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+                  100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+                }
+
+                .arrow-icon{position:absolute;bottom:10px;left:50%;margin-left:-20px;width:40px;text-align:center;display:none;
+                z-index:999;-webkit-animation-name:arrowing;-webkit-animation-duration:1.6s;-webkit-animation-iteration-count:infinite}
+                .arrow-icon img{width:40px}
+                @-webkit-keyframes arrowing{
+                    0%{-webkit-transform:translateY(-5px);opacity:.8}
+                    50%{-webkit-transform:translateY(10px);opacity:1}
+                    100%{-webkit-transform:translateY(-5px);opacity:.8}
+                }
+
+                .statusbtn {display:inline-block;margin:auto 8px;font-size:18px;width:65px;height:65px;border-radius:50%;color:#666;border:1px solid #666;background:#fff;text-align:center;line-height:65px;}
+
+                .numbtn {display:inline-block;margin:auto 8px;font-size:18px;width:65px;height:65px;border-radius:50%;color:#666;border:1px solid #666;background:#fff;text-align:center;line-height:65px;}
+
+                .statusbtn.ept,.numbtn.ept {color:#ff705e;border-color:#ff705e;}
+
+                .appdown i{padding-left:28px;position:relative;}
+                  .appdown i:before {position:absolute;left:0;top:0;bottom:0;margin:auto;content:'';width:22px;height:22px;background:url(http://qnm.hunliji.com/o_1akl2o4dr162vl25hnv1qce1tt47.png) no-repeat;background-size:100% 100%;}
+
+
+  </style>
+  <style>
+    .feedback_new {position:absolute;left:0;right:0;margin:auto;}
+      .feedback_new dl {}
+      .feedback_new dt {margin:auto;width:62.5%;text-align:center;}
+        .feedback_new dt span {float:left;width:50%;padding:5px 0;box-sizing:border-box;border:1px solid #ff705e;color:#ff705e;background:#fff}
+        .feedback_new dt span:nth-child(1){border-radius:6px 0 0 6px;}
+        .feedback_new dt span:nth-child(2){border-radius:0 6px 6px 0;}
+        .feedback_new span.spk {background:#ff705e;color:#fff;}
+      .feedback_new dd {margin:0 auto 16px;width:83%;font-size:14px;overflow:hidden;}
+        .fb_form {padding:8px 0 0;}
+          .fb_form_lay {overflow:hidden;}
+          .fb_form_lay:nth-child(4){margin-top:18px;}
+          .fb_form_lay input,.fb_form_lay textarea {border:0;background:transparent;}
+            .fb_form_lay em {float:left;margin-right:8px;position:relative;padding-left:8px;color:#666;}
+            .fb_form_lay em:before {position:absolute;top:3px;left:0;content:'*';color:#ff705e;}
+
+            .reply_state {overflow:hidden;}
+              .reply_state i {float:left;padding:6px 8px;margin-right:6px;border-radius:6px;}
+              .reply_state i.ipk {border:1px solid #ff705e;color:#ff705e;}
+              .reply_count {float:left;border-radius:6px;border:1px solid #e7e7e7;width:27.5%;text-align: center;overflow:hidden;font-size:20px;}
+              .reply_count i {float:left;width:30%;padding:6px 0;box-sizing:border-box;}
+              .reply_count i:nth-child(1) {color:#999;}
+              .reply_count i:nth-child(3) {color:#ff705e;}
+              .reply_count cite {float:left;width:40%;padding:6px 8px;box-sizing:border-box;}
+              .reply_wish {width:70%;}
+
+        .fb_send,.fb_send_gift {margin:0 auto;width:98%;line-height:36px;border-radius:6px;text-align:center;background:#ff705e;color:#fff;}
+        .fb_send_gift{}
+        .fb_link {margin:12px auto 0;width:98%;overflow:hidden;}
+        .fb_link button{line-height:36px;border-radius:6px;padding:0 8px;background:#fff;border:1px solid #ff705e;font-size:14px;}
+        .fb_link button:nth-child(1) {float:left;position:relative;padding-left:28px;color:#ff705e;}
+
+        .fb_link button:nth-child(2) {float:right;position:relative;padding-left:28px;border-color:#ff705e;color:#fff;background:#ff705e}
+        /*.icon.iconfont {left:5px;}*/
+
+          .gift_box {margin-top:3px;overflow-y:auto;}
+            .area_gift {float:left;padding:0 5px 5px 0;box-sizing:border-box;width:28%;text-align:center}
+              .gift {position:relative;color:#ff705e;}
+                .gift img {width:100%;}
+              .gift i {display:none}
+            .gift_ko {position:relative;border:1px solid #ff705e;}
+            .gift_ko .icon {bottom:-2px;right:0;}
+            .gift_ko i {display:block;float:none;padding:0;margin-right:0;border-radius:0;width:16px;}
+
+
+      .area-chat {margin:auto;padding-top:2px;width:90%;height:39px;position:absolute;left:0;right:0;overflow:hidden;}
+        .chat-cont {-webkit-transition-duration:300ms;transition-timing-function:linear}
+          .chat-cont-col {display:-webkit-box;height:18px;line-height:18px;margin-bottom:3px;-webkit-line-clamp:1;-webkit-box-orient:vertical;color:#fff;overflow:hidden;}
+            .chat-cont-col i {display:inline-block;padding:0 6px;border-radius:0 6px 6px 0;background:#fff;color:#333;}
+            .chat-cont-col span {margin-left:6px;color:#fff;}
+
+      .action-gift {}
+        .gift-info {position:relative;width:100%;height:130px;overflow:hidden;}
+        .gift-info dl {position:absolute;top:15px;left:0;right:0;margin:auto;width:68%;height:44px;border-radius:50px;color:#fff;background:rgba(0,0,0,0.6);overflow:hidden;-webkit-transition-timing-function:linear;-webkit-transition-duration:10s}
+        .gift-info dt {float:left;margin:4px;box-sizing:border-box;width:36px;overflow:hidden;}
+          .gift-info dt img {border-radius:50%;}
+        .gift-info dd {padding-top:4px;}
+          .gift-info dd h5,.gift-info dd p {display:-webkit-box;height:18px;line-height:18px;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;}
+          .gift-info dd h5 {font-weight:700;}
+          .gift-info dd p {font-size:14px;}
+
+    @font-face {font-family: "iconfont";
+      src: url('fonts/iconfont.eot?t=1486633173997'); /* IE9*/
+      src: url('fonts/iconfont.eot?t=1486633173997#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('fonts/iconfont.woff?t=1486633173997') format('woff'), /* chrome, firefox */
+      url('fonts/iconfont.ttf?t=1486633173997') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+      url('fonts/iconfont.svg?t=1486633173997#iconfont') format('svg'); /* iOS 4.1- */
+    }
+
+
+    .iconfont {
+      font-family:"iconfont" !important;
+      font-size:16px;
+      font-style:normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icon-daohang:before { content: "\e65b"; }
+    .icon-xuanzhong:before { content: "\e601"; }
+    .icon-plumage:before { content: "\e600"; }
+
+
+
+    .gift-info-first {position:fixed;top:-500px;width:100%;height:130px;overflow:hidden;z-index:9999;}
+    .gift-info-first.haveGift{top:0;}
+    .gift-info-first img {width:100%;}
+
+        .gift-info-first dl {position:absolute;top:15px;left:0;right:0;margin:auto;width:68%;height:44px;border-radius:50px;color:#fff;background:rgba(0,0,0,0.6);overflow:hidden;-webkit-transition-timing-function:linear;-webkit-transition-duration:10s}
+        .gift-info-first dt {float:left;margin:4px;box-sizing:border-box;width:36px;overflow:hidden;}
+          .gift-info-first dt img {border-radius:50%;}
+        .gift-info-first dd {margin-top:4px;}
+          .gift-info-first dd h5,.gift-info-first dd p {display:-webkit-box;height:18px;line-height:18px;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;}
+          .gift-info-first dd h5 {font-weight:700;}
+          .gift-info-first dd p {font-size:14px;}
+
+    .layGift {display:-webkit-box;margin-top:8px;}
+      .giftBtn {-webkit-box-flex:1;}
+        .giftBtn span {display:block;width:86%;margin:auto;border:2px solid #ddd;border-radius:6px;overflow:hidden;}
+        .giftBtn span.kt {position:relative;border-color:#f83244;}
+        .giftBtn span.kt:before{position:absolute;bottom:0;right:0;display:block;content:'';width:20px;height:20px;background:url(http://qnm.hunliji.com/o_1bbvd53e0hl81atg1bd32mbh6b7.png) no-repeat;background-size:100% 100%;}
+        .giftBtn img {width:100%;}
+
+
+    .price_nav {}
+      .price_nav span,.gift_nav span,.reset_nav span,.close_nav span {position:relative;}
+      .price_nav span:before,.gift_nav span:before,.reset_nav span:before,.close_nav span:before{
+        margin:6px auto 2px;display:block;content:'';width:18px;height:18px;position:absolute;left:0;right:0;top:-1px;
+      }
+      .price_nav span {background:url(http://qnm.hunliji.com/o_1bdg4l4on2hk2s151hgec128ir.png) no-repeat;background-size:100% 100%;}
+
+      .gift_nav span {background:url(http://qnm.hunliji.com/o_1bdg4lbc01bn417k514mb1e2lv9o10.png) no-repeat;background-size:100% 100%;}
+
+      .reset_nav span {background:url(http://qnm.hunliji.com/o_1bdg4kt7nng1e8c1ifhacqaeom.png) no-repeat;background-size:100% 100%;}
+
+      .close_nav span {background:url(http://qnm.hunliji.com/o_1bdg4ka3lom6q101n6m1gfv1tljc.png) no-repeat;background-size:100% 100%;}
+      .close_nav span.ct {background:url(http://qnm.hunliji.com/o_1bdg4kira1f1n81uc5k671ubjh.png) no-repeat;background-size:100% 100%;}
+
+        .ipy {position:absolute;margin:auto;top:0;left:0;right:0;opacity:0;}
+        .ipy_a {width:31px;-webkit-transform:rotate(-20deg);animation: ipyA 3s ease-in-out infinite 1s;}
+        .ipy_b {width:25px;-webkit-transform:rotate(20deg);animation: ipyB 3s ease-in-out infinite 1s;}
+        .ipy_c {width:20px;-webkit-transform:rotate(-8deg);animation: ipyC 3s ease-in-out infinite 1s;}
+
+        @-webkit-keyframes ipyA {
+          0% { opacity:0;-webkit-transform:rotate(-0deg) scale(.1) translateY(0px); }
+          15% { opacity:1;-webkit-transform:rotate(-20deg) scale(1) translateY(-30px); }
+          50% { opacity:1;-webkit-transform:rotate(-20deg) scale(.9) translateY(-28px); }
+          75% { opacity:1;-webkit-transform:rotate(-20deg) scale(1) translateY(-30px); }
+          100% {  opacity:0;-webkit-transform:rotate(0deg) scale(.1) translateY(0px); }
+        }
+        @-webkit-keyframes ipyB {
+          0% { opacity:0;-webkit-transform:rotate(0deg) scale(.1) translateY(0px); }
+          25% { opacity:1;-webkit-transform:rotate(20deg) scale(1) translateY(-37px); }
+          50% { opacity:1;-webkit-transform:rotate(20deg) scale(.9) translateY(-35px); }
+          80% { opacity:1;-webkit-transform:rotate(20deg) scale(1) translateY(-37px); }
+          100% {  opacity:0;-webkit-transform:rotate(0deg) scale(.1) translateY(0px); }
+        }
+        @-webkit-keyframes ipyC {
+          0% { opacity:0;-webkit-transform:rotate(-0deg) scale(.1) translateY(0px); }
+          35% { opacity:1;-webkit-transform:rotate(-20deg) scale(1) translateY(-45px); }
+          50% { opacity:1;-webkit-transform:rotate(-20deg) scale(.9) translateY(-42px); }
+          90% { opacity:1;-webkit-transform:rotate(-20deg) scale(1) translateY(-45px); }
+          100% {  opacity:0;-webkit-transform:rotate(0deg) scale(.1) translateY(0px); }
+        }
+
+        .goFirst {display:none;width:28px;position:fixed;top:0;bottom:0;right:0;margin:auto;opacity:.5;z-index:9999}
+        .lastPage .goFirst {display:block;}
+
+        .winPrice {margin:auto;position:fixed;top:0;left:0;bottom:0;right:0;width:90%;background:url(http://qnm.hunliji.com/o_1bd1hj4qj1nfungf1gtm924k897.png) top no-repeat #fff;background-size:100% auto;border-radius:10px;font-size:14px;z-index:999999}
+        .winGift {background:url(http://qnm.hunliji.com/o_1bd343k2tq8at1sd53jfd1u7h7.png) top no-repeat #fff;background-size:100% auto;}
+
+        .stateBtn {-webkit-transition-duration:1s;}
+  </style>
+</head>
+<body>
+    <img class="goFirst" src="http://qnm.hunliji.com/o_1bc9tblu317tvhlk1osl136h13mrc.png"/>
+    <div class="loadmore-loading"><div></div><p></p></div>
+    <div id="wrap">
+        <div class="wrap-main"></div>
+    </div>
+    <div class="arrow-icon">
+        <img src="http://qnm.hunliji.com/o_1agpam0fsibn2814j110101jcr7.png">
+    </div>
+    <div id="playBtn" class="playing"><img src="http://qnm.hunliji.com/Fv22sY5AC_4vHRZnxnOdRJDyRT2j"></div>
+    <script src="//ocafkzd89.qnssl.com/zepto.min.js"></script>
+    <script src="//ocafkzd89.qnssl.com/jweixin-1.0.0.js"></script>
+    <script src="//ocafkzd89.qnssl.com/base64.min.js"></script>
+    <script src="//ocafkzd89.qnssl.com/wxShare.min.js"></script>
+    <script src="/p/wedding/Tpl/default/script/sendCommand.js"></script>
+    <!-- <script src="//map.qq.com/api/js?v=2.exp&libraries=convertor"></script> -->
+    <script>
+
+    function stopMusic(){
+          if($('#playBtn').hasClass('rotate')){
+                  document.querySelector('#playMusic').pause();
+                  $('#playBtn').removeClass('rotate');
+                  document.getElementById('playBtn').innerHTML='<img src="http://qnm.hunliji.com/o_1bepaofh0137f1e1ms0f1c7noc6c.png" />';
+                  weddingCard.auto = 1;
+                }
+        }
+
+
+    var weddingCard = {};
+        weddingCard.txtarea='0';
+        weddingCard.feedName='0';
+        weddingCard.make=0;
+        weddingCard.guestTemplate='1';
+        weddingCard.touchBody='0'; //滑动开关
+        weddingCard.winW = $(window).width();
+        weddingCard.winH = $(window).height();
+
+        weddingCard.giftId = '8';
+        weddingCard.giftPrice = '13.14';
+
+        weddingCard.msgStatus = true;
+
+        weddingCard.writeCookie = function(name, value, hours){
+            var expire = "";
+            if(hours != null){
+                expire = new Date((new Date()).getTime() + hours * 3600000);
+                expire = "; expires=" + expire.toGMTString();
+            }
+            document.cookie = name + "=" + escape(value) + expire + ";path=/";
+        }
+
+        weddingCard.getCookie = function(cookieName){
+            var cookieValue = document.cookie;
+            var cookieStartAt = cookieValue.indexOf(""+cookieName+"=");
+            if(cookieStartAt==-1){
+                cookieStartAt = cookieValue.indexOf(cookieName+"=");
+            }
+            if(cookieStartAt==-1){
+                cookieValue = null;
+            }else{
+                cookieStartAt = cookieValue.indexOf("=",cookieStartAt)+1;
+                cookieEndAt = cookieValue.indexOf(";",cookieStartAt);
+                if(cookieEndAt==-1)
+                {
+                    cookieEndAt = cookieValue.length;
+                }
+                cookieValue = unescape(cookieValue.substring(cookieStartAt,cookieEndAt));
+            }
+            return cookieValue;
+        }
+
+        weddingCard.getUrlParams = function(){
+          var urlParams;
+            var match,
+            pl = /\+/g,
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function(s) {
+              return decodeURIComponent(s.replace(pl, " "));
+            },
+            query = window.location.search.substring(1);
+            urlParams = {};
+            while (match = search.exec(query))
+               urlParams[decode(match[1])] = decode(match[2]);
+            return urlParams;
+        }
+
+        //获取请帖ID
+    var _idv = weddingCard.getUrlParams();
+        weddingCard.cardId = _idv['card_id'];
+        weddingCard.speechId = _idv['speech_id'];
+        weddingCard.test = _idv['test'];
+        weddingCard.isPreview = _idv['isPreview'];
+        weddingCard.cash_gift_on = _idv['cash_gift_on'];
+        weddingCard.timestamp = _idv['timestamp'];
+        weddingCard.sign = _idv['sign'];
+
+        if(weddingCard.getCookie('cashGiftName')){
+          weddingCard.cashGiftName = weddingCard.getCookie('cashGiftName')
+        }
+        /*var _url='http://test.hunliji.com';*/
+        var _url='';
+        weddingCard.api = {
+          'page':'/p/wedding/index.php/Home/APIInvationV2/previewPage/id/',
+          'template':'/p/wedding/index.php/Home/APIInvationV2/previewTemplate/id/',
+          'card':_url+'/p/wedding/index.php/Home/APIInvationV2/pageListByCardId/id/',
+          'reply':'/p/wedding/index.php/Home/APIInvationV2/reply',
+          'sdkData':'/v1/api/app/tracker/batch.json',
+          'gifts':'/p/wedding/index.php/Home/APICardGift2/index',
+          'gifts_Comments':_url+'/p/wedding/index.php/Home/APICardGift2/gifts_and_replies',
+          'giftGive':'/p/wedding/index.php/Home/APICardGift2/give',
+          'giftPay':'/p/wedding/index.php/Home/APICardGift2/payback'
+        }
+
+    var wishColes = [
+          '祝永远幸福，开心快乐到白头。',
+          '收到请帖，祝你们相亲相爱到永远。',
+          '祝福你们，婚纱照很美，是最幸福的模样。',
+          '新婚快乐，祝恩爱长长久久。',
+          '婚纱照很美，郎才女貌一对璧人，祝新婚快乐。',
+          '千言万语都在这句祝福里，新婚快乐。',
+          '祝福你们恩爱甜蜜，直到永远。',
+          '恭喜！衷心的祝福你们新婚快乐，幸福美满。',
+          '真是天作之合，愿你们携手白头。',
+          '恭喜你们，祝新婚快乐，早生贵子。'
+        ],
+        rge = wishColes.length-1,
+        rgeN = Math.round(rge*Math.random());
+        weddingCard.wishCol = wishColes[rgeN];console.log(weddingCard.wishCol)
+
+        weddingCard.cashGift = function(params){console.log(params)
+             var data = encodeURIComponent(JSON.stringify(params.data));
+                 api = encodeURIComponent(params.api),
+                 callback = encodeURIComponent(params.callback),
+                 SouName = encodeURIComponent(params.SouName);
+                 location.href='/p/wedding/Home/Pay/cash_gift?Params='+data+'&SouName='+SouName+'&api='+api+'&callback='+callback;
+          }
+
+        weddingCard.pay = function(params){
+           var paySouName = encodeURIComponent(params.paySouName),
+               payName = encodeURIComponent(params.payName),
+               payGift = encodeURIComponent(params.payGift),
+               payApi = encodeURIComponent(params.payApi),
+               payParams = encodeURIComponent(JSON.stringify(params.payParams)),
+               payMoney = encodeURIComponent(params.payMoney),
+               payCallBack = encodeURIComponent(params.payCallBack);
+
+               location.href='/p/wedding/Home/Pay/card?paySouName='+paySouName+'&payName='+payName+'&payGift='+payGift+'&payApi='+payApi+'&payParams='+payParams+'&payMoney='+payMoney+'&payCallBack='+payCallBack
+        }
+
+        weddingCard.msgMax2BTN = function($btnArr,$state){
+
+          var _html='';
+          if(weddingCard.cashGiftOn==0){
+            _html='<div class="msgMax_box" style="position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:999"></div><div class="msgMax_box" style="margin:auto;position:fixed;top:0;left:0;bottom:0;right:0;width:75%;height:'+$(window).height()*0.30+'px;background:#fff;border-radius:8px;text-align:center;font-size:.7rem;z-index:9999"><p style="padding:0 18px;display:table-cell;vertical-align:middle;font-size:14px;color:#666;width:'+$(window).width()*0.75+'px;height:'+$(window).height()*0.23+'px;">您的回复已发送成功<br>给新人送个礼物或发个红包吧</p><div class="msgMax_btn" style="display:-webkit-box;color:#ff705e;font-size:14px;border-top:1px solid #e5e5e5;line-height:'+$(window).height()*0.07+'px;"><div class="cancelBtnMax" style="-webkit-box-flex:1;border-right:1px solid #e5e5e5;">'+$btnArr[0]+'</div></div></div>';
+          }else{
+            _html='<div class="msgMax_box" style="position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:999"></div><div class="msgMax_box" style="margin:auto;position:fixed;top:0;left:0;bottom:0;right:0;width:75%;height:'+$(window).height()*0.30+'px;background:#fff;border-radius:8px;text-align:center;font-size:.7rem;z-index:9999"><p style="padding:0 18px;display:table-cell;vertical-align:middle;font-size:14px;color:#666;width:'+$(window).width()*0.75+'px;height:'+$(window).height()*0.23+'px;">您的回复已发送成功<br>给新人送个礼物或发个红包吧</p><div class="msgMax_btn" style="display:-webkit-box;color:#ff705e;font-size:14px;border-top:1px solid #e5e5e5;line-height:'+$(window).height()*0.07+'px;"><div class="cancelBtnMax" style="-webkit-box-flex:1;border-right:1px solid #e5e5e5;">'+$btnArr[0]+'</div><div class="payBtn" style="-webkit-box-flex:1">'+$btnArr[1]+'</div></div></div>';
+          }
+
+          $('body').append(_html)
+
+          weddingCard.notouch = true;
+
+          $(document).on('touchend','.cancelBtnMax',function(){
+            $('.msgMax_box').remove();
+            weddingCard.giftWin(weddingCard.cashGiftName)
+            return false
+          })
+
+          $(document).on('touchend','.payBtn',function(){
+            $('.msgMax_box').remove()
+            weddingCard.priceWin(weddingCard.cashGiftName)
+            if($state){$state()}
+            return false
+          })
+
+        }
+
+        weddingCard.touchFocus = function($obj,$state){
+          $(document).on('touchstart',$obj,function(){
+            $($obj).focus();
+            if($state){$state()}
+          })
+        }
+
+        weddingCard.priceWin = function($name){
+          var _w='70%';
+          if(weddingCard.winW<=320){_w='60%'}
+            var _inpH='height:'+weddingCard.winW*0.135+'px;line-height:'+weddingCard.winW*0.135+'px;';
+
+            $('body').append('<div class="msgMax_box" style="position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:999999"></div><div class="msgMax_box winPrice" style="height:'+weddingCard.winW*1.18+'px"><i class="closed" style="position:absolute;top:0;right:0;width:30px;"><img style="width:100%" src="http://qnm.hunliji.com/o_1bd1htffi1vvc7p5ssf17gpu81c.png"/></i><div style="padding:'+weddingCard.winW*0.31+'px 0 15px;width:'+weddingCard.winW*0.78+'px;margin:auto;">\
+            <div style="padding-bottom:12px;"><div style="padding:0 8px;border-radius:8px;'+_inpH+'background:#fff"><em style="color:#f83144">*</em> 赠送人<input oninput="if(value.length>10)value=value.slice(0,10)" placeholder='+($name||'请输入您的姓名')+' class="cashGiftName" style="margin-left:26px;border:none;width:64%;" type="text"/></div></div>\
+            <div style="padding-bottom:8px;margin-top:16px;border-bottom:1px solid #f5f5f5"><div style="padding:0 8px;'+_inpH+'"><em style="color:#f83144">*</em> 祝福语<input placeholder="'+weddingCard.wishCol+'"  class="sendWish" style="margin-left:26px;width:'+_w+';border:none;" type="text"/></div></div>\
+            <div style="padding-bottom:8px;border-bottom:1px solid #f5f5f5"><div style="padding:0 8px;'+_inpH+'"><em style="color:#f83144">*</em> 礼金金额<input placeholder="请输入礼金金额" class="sendPrice" style="margin-left:12px;width:'+_w+';border:none;" type="number"/></div></div><div style="position:relative;margin:12px 0;overflow:hidden;"><img style="position:absolute;top:3px;left:8px;width:'+weddingCard.winW*0.0375+'px" src="http://qnm.hunliji.com/o_1bd1j88a33gu1dcrhhj1sal1kvh.png"/><p style="float:right;width:'+weddingCard.winW*0.7+'px;color:#f83144;">小主放心送，礼金金额将全部转至新人的婚礼纪账户~</p></div><div class="msgMax_btn"><button class="priceSend" style="display:block;width:'+weddingCard.winW*0.78+'px;margin:auto;color:#fff;background:#f83144;border:none;text-align:center;height:'+weddingCard.winW*0.1+'px;line-height:'+weddingCard.winW*0.1+'px;border-radius:6px;font-size:14px;">送礼金</button></div></div>')
+
+            weddingCard.touchFocus('.cashGiftName');
+
+            weddingCard.touchFocus('.sendWish',function(){
+              weddingCard.wishCol=''
+            });
+            weddingCard.touchFocus('.sendPrice');
+            weddingCard.notouch = true;
+
+        }
+
+        weddingCard.giftWin = function($name){
+
+            var _w='70%';
+            var _inpH='height:'+weddingCard.winW*0.135+'px;line-height:'+weddingCard.winW*0.135+'px;';
+
+            $('body').append('<div class="msgMax_box" style="position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:999999"></div><div class="msgMax_box winPrice winGift" style="height:'+weddingCard.winW*1.38+'px"><i class="closed" style="position:absolute;top:0;right:0;width:30px;"><img style="width:100%" src="http://qnm.hunliji.com/o_1bd1htffi1vvc7p5ssf17gpu81c.png"/></i><div style="padding:'+weddingCard.winW*0.31+'px 0 15px;width:'+weddingCard.winW*0.78+'px;margin:auto;">\
+            <div><div style="padding:0 8px;border-radius:8px;'+_inpH+'background:#fff"><em style="color:#f83144">*</em> 赠送人<input oninput="if(value.length>10)value=value.slice(0,10)" placeholder='+($name||'请输入您的姓名')+' class="cashGiftName" style="margin-left:26px;border:none;width:64%;" type="text"/></div></div>\
+            <div class="layGift" style="margin-top:'+weddingCard.winW*0.1+'px;">\
+                    <p class="giftBtn">\
+                      <span pice="1.99" vid="1">\
+                        <img src="http://qnm.hunliji.com/o_1b9fpk6p4tkpif2rlk1cel1693c.png?imageView2/1/w/200/h/200"/>\
+                      </span>\
+                    </p>\
+                    <p class="giftBtn">\
+                      <span pice="6.66" vid="3">\
+                        <img src="http://qnm.hunliji.com/o_1b9g57rpb1hbo16jtmpjv20glsc.png?imageView2/1/w/200/h/200"/>\
+                      </span>\
+                    </p>\
+                    <p class="giftBtn">\
+                      <span class="kt" pice="13.14" vid="8">\
+                        <img src="http://qnm.hunliji.com/o_1b9fpjilm1pd6nol1sva1iae16b57.png?imageView2/1/w/200/h/200"/>\
+                      </span>\
+                    </p>\
+                </div>\
+                <div class="layGift">\
+                    <p class="giftBtn">\
+                      <span pice="19.99" vid="5">\
+                        <img src="http://qnm.hunliji.com/o_1b9fpkrv45pa1l3i11pn4lr14mfm.png?imageView2/1/w/200/h/200"/>\
+                      </span>\
+                    </p>\
+                    <p class="giftBtn">\
+                      <span pice="66.66" vid="10">\
+                        <img src="http://qnm.hunliji.com/o_1bf90h4gsmoa1vriukvi121ek77.jpg?imageView2/1/w/200/h/200"/>\
+                      </span>\
+                    </p>\
+                    <p class="giftBtn">\
+                      <span pice="99.99" vid="7">\
+                        <img src="http://qnm.hunliji.com/o_1b986pu2o1117134814ra1bpr13i5c.png?imageView2/1/w/200/h/200"/>\
+                      </span>\
+                    </p>\
+                </div>\
+            <div style="position:relative;margin:12px 0;overflow:hidden;"><img style="position:absolute;top:3px;left:8px;width:'+weddingCard.winW*0.0375+'px" src="http://qnm.hunliji.com/o_1bd1j88a33gu1dcrhhj1sal1kvh.png"/><p style="float:right;width:'+weddingCard.winW*0.7+'px;color:#f83144;">小主放心送，礼物金额将全部转至新人的婚礼纪账户~</p></div><div class="msgMax_btn"><button class="giftSend" style="display:block;width:'+weddingCard.winW*0.78+'px;margin:auto;color:#fff;background:#f83144;border:none;text-align:center;height:'+weddingCard.winW*0.1+'px;line-height:'+weddingCard.winW*0.1+'px;border-radius:6px;font-size:14px;">赠送礼物</button></div></div>')
+
+            weddingCard.touchFocus('.cashGiftName');
+            $(document).on('touchstart','.giftBtn span',function(){
+                  $('.cashGiftName').blur();
+                  $('.giftBtn span').removeClass('kt')
+                  $(this).addClass('kt')
+
+                  weddingCard.giftId = $(this).attr('vid');
+                  weddingCard.giftPrice = $(this).attr('pice');
+
+               })
+               weddingCard.notouch = true;
+
+            }
+
+        weddingCard.stateBtn = function(){
+            var _pos = 'display:-webkit-box;position:fixed;bottom:-100px;width:100%;z-index:999',
+                _flex ='-webkit-box-flex:1;text-align:center;',
+                _layIcon = 'position:relative;margin:auto;display:block;width:50px;height:50px;border-radius:50%;color:#fff;line-height:68px',_ptS='',_gtS='';
+                if(weddingCard.guestTemplate==0){
+                  _gtS='display:none;'
+                }
+                if(weddingCard.cashGiftOn==0){
+                  _ptS='display:none;'
+                }
+            var stateCard='';
+            if(weddingCard.cardGiftOn==0){
+                stateCard='display:none'
+            }
+            if(weddingCard.cashGiftOn!=0){
+                 var _html='<div class="stateBtn" style='+_pos+'>\
+                          <div style="'+_flex+'width:50px"><div class="price_nav" style='+_ptS+' >\
+                          <span style='+_layIcon+'>\
+                          <img class="ipy ipy_c" src="http://qnm.hunliji.com/o_1bc9eund0rss1fdak181pc31qpec.png"/>\
+                          <img class="ipy ipy_b" src="http://qnm.hunliji.com/o_1bc9eund0rss1fdak181pc31qpec.png"/>\
+                          <img class="ipy ipy_a" src="http://qnm.hunliji.com/o_1bc9eund0rss1fdak181pc31qpec.png"/>\
+                            </span></div></div>\
+                          <div class="gift_nav" style="'+_flex+';'+stateCard+'"><span style='+_layIcon+'></span></div>\
+                          <div style='+_flex+'></div>\
+                          <div style='+_flex+'></div>\
+                          <div style="'+_flex+'width:50px"><div class="reset_nav" style='+_gtS+'><span style='+_layIcon+'></span></div></div>\
+                          <div class="close_nav" style="'+_flex+';display:none"><span style='+_layIcon+'></span></div>\
+                       </div>';
+            }else{
+                 var _html='<div class="stateBtn" style='+_pos+'>\
+                          <div class="gift_nav" style="'+_flex+';'+stateCard+'"><span style='+_layIcon+'></span></div>\
+                          <div style="'+_flex+'width:50px"></div>\
+                          <div style='+_flex+'></div>\
+                          <div style='+_flex+'></div>\
+                          <div style="'+_flex+'width:50px"><div class="reset_nav" style='+_gtS+'><span style='+_layIcon+'></span></div></div>\
+                          <div class="close_nav" style="'+_flex+';display:none"><span style='+_layIcon+'></span></div>\
+                       </div>';
+            }
+
+
+            $('body').append(_html);
+
+
+            function doRemove($obj,$method){
+              $(document).on('touchstart',$obj,function(){
+                  if($obj=='.closed'||$obj=='.cancelBtn'){
+                    weddingCard.notouch = false;
+                  }
+                  if($method){$method()}
+              })
+            }
+
+            doRemove('.closed',function(){
+              $('.msgMax_box').remove();
+            });
+            doRemove('.cancelBtn',function(){
+              $('.msgMax_box').remove();
+            });
+
+            doRemove('.priceSend',function(){
+              if(!weddingCard.is_weixin()){
+                    weddingCard.msgMax('请在微信浏览器中打开','好的')
+                    return false
+                }
+              var _time = new Date().getTime(),
+                  _price = $('.sendPrice').val(),
+                  _cashGiftName = $('.cashGiftName').val(),
+                  _sendWish = $('.sendWish').val();
+                  sessionStorage.backUrl = location.href
+
+                  if(_cashGiftName){
+                    weddingCard.cashGiftName = $('.cashGiftName').val();
+                  }
+
+                  if(_sendWish){
+                    weddingCard.wishCol = $('.sendWish').val();
+                  }
+
+
+                  if(!weddingCard.cashGiftName){
+                    weddingCard.msg('请填写姓名');
+                    return false
+                  }else if(!_price){
+                    weddingCard.msg('请填写礼金金额');
+                  }else if(weddingCard.wishCol==''){
+                    weddingCard.msg('请填写祝福语');
+                  }else{
+                    weddingCard.notouch = false;
+                    weddingCard.cashGift({
+                      api:'/p/wedding/index.php/Home/APICardCashGift/give',
+                      callback:'/p/wedding/Public/wap/activity/20170217-B-pay-success.html',
+                      data:{
+                        card_id:weddingCard.cardId,
+                        current_time:_time,
+                        giver_name:weddingCard.cashGiftName,
+                        price:_price
+                      },
+                      SouName:weddingCard.giftSouName
+
+                    })
+                    $('.msgMax_box').remove();
+                  }
+
+
+            })
+
+            doRemove('.giftSend',function(){
+                if(!weddingCard.is_weixin()){
+                      weddingCard.msgMax('请在微信浏览器中打开','好的')
+                      return false
+                  }
+
+                  var _cashGiftName;
+                  if(!weddingCard.cashGiftName){
+                      _cashGiftName = $('.cashGiftName').val();
+
+                      if(_cashGiftName){
+                        weddingCard.cashGiftName = $('.cashGiftName').val();
+                      }else{
+                        weddingCard.msg('请填写姓名');
+                        return false
+                      }
+                  }
+
+
+                  switch(weddingCard.giftId){
+                      case '1':
+                        weddingCard.gift = '一箱红枣'
+                      break;
+                      case '3':
+                        weddingCard.gift = '一车套套'
+                      break;
+                      case '8':
+                        weddingCard.gift = '一座城堡'
+                      break;
+                      case '5':
+                        weddingCard.gift = '一辆跑车'
+                      break;
+                      case '10':
+                        weddingCard.gift = '达康的祝福'
+                      break;
+                      case '7':
+                        weddingCard.gift = '月球蜜月游'
+                      break;
+                  }
+                  sessionStorage.backUrl = location.href
+                  weddingCard.notouch = false;
+                  weddingCard.current_time = new Date().getTime()
+                  weddingCard.pay({
+                      payName:weddingCard.cashGiftName,
+                      paySouName:weddingCard.giftSouName,
+                      payApi: weddingCard.api.giftGive,
+                      payGift:weddingCard.gift,
+                      payParams: {
+                        current_time:weddingCard.current_time,
+                        card_gift2_id: weddingCard.giftId,
+                        card_id: weddingCard.cardId,
+                        giver_name: weddingCard.cashGiftName,
+                        user_id: weddingCard.userId,
+                        wishes:weddingCard.wishCol
+                      },
+                      payMoney: weddingCard.giftPrice,
+                      payCallBack: '/p/wedding/Public/wap/activity/20170217-B-pay-success.html'
+
+                  })
+
+
+            })
+
+            doRemove('.price_nav',function(){console.log(weddingCard.wishCol)
+              weddingCard.priceWin(weddingCard.cashGiftName)
+            });
+
+            doRemove('.gift_nav',function(){
+              weddingCard.giftWin(weddingCard.cashGiftName)
+            });
+
+            doRemove('.close_nav',function(){
+              weddingCard.notouch = true
+              setTimeout(function(){
+                  weddingCard.notouch = false
+              },100)
+              if(weddingCard.msgStatus){
+                weddingCard.msgStatus = false;
+                $('.close_nav span').addClass('ct')
+                $('.gift-info-first').css({'opacity':0})
+              }else{
+                weddingCard.msgStatus = true;
+                $('.close_nav span').removeClass('ct');
+                $('.gift-info-first').css({'opacity':1})
+              }
+
+            });
+
+            $(document).on('touchstart','.reset_nav',function(){
+              var r=JSON.parse(weddingCard.dataD).length-1;
+                  if(weddingCard.r==r){return false}
+                  $('body').addClass('lastPage')
+                  weddingCard.r = r;
+                  weddingCard.dom(weddingCard.cardObj[r],function(){
+                      setTimeout(function(){
+                          $('.lay-slide-bg').show();
+                          $('.lay-slide-cont').show();
+                            console.log('最后一页');
+
+                              weddingCard.viewLastFun()
+                              weddingCard.userFrom()
+                            $('.arrow-icon img').hide()
+                      },600)
+                  });
+                  $('.lay-slide').eq(1).css({'-webkit-transform':' translate3d(0, '+weddingCard.winH+'px, 0)'});
+                  setTimeout(function(){
+                      $('.lay-slide').eq(0).css({'-webkit-transition-duration':'800ms','-webkit-transform':'scale(0.5)'});
+                      $('.lay-slide').eq(1).css({'-webkit-transform':'translate3d(0, 0, 0)'});
+                  },100);
+                  setTimeout(function(){
+                      $('.lay-slide').eq(0).remove();
+                      $('body').removeClass('playOnload');
+                  },700)
+
+
+            })
+
+            $(document).on('touchend','.goFirst',function(){
+              weddingCard.notouch = true
+              setTimeout(function(){
+                  weddingCard.notouch = false
+              },100)
+              var r=0;
+                  if(weddingCard.r==r){return false}
+                   weddingCard.r = r;
+
+                 $('body').removeClass('lastPage')
+                 $('.arrow-icon img').show()
+                  weddingCard.dom(weddingCard.cardObj[r],function(){
+                      setTimeout(function(){
+                          $('.lay-slide-bg').show();
+                          $('.lay-slide-cont').show();
+                          if(weddingCard.st){
+                              clearTimeout(weddingCard.sto)
+                              clearTimeout(weddingCard.stz)
+                              clearTimeout(weddingCard.st)
+                              clearTimeout(weddingCard.stm)
+                            }
+                       },600)
+                  });
+                  $('.lay-slide').eq(1).css({'-webkit-transform':' translate3d(0, '+weddingCard.winH+'px, 0)'});
+                  setTimeout(function(){
+                      $('.lay-slide').eq(0).css({'-webkit-transition-duration':'800ms','-webkit-transform':'scale(0.5)'});
+                      $('.lay-slide').eq(1).css({'-webkit-transform':'translate3d(0, 0, 0)'});
+                  },100);
+                  setTimeout(function(){
+                      $('.lay-slide').eq(0).remove();
+                      $('body').removeClass('playOnload');
+                  },700)
+                $('.gift-info-first').removeClass('haveGift')
+            })
+
+        }
+
+        weddingCard.dom = function($html,func){
+           $('.wrap-main').append('<div class="lay-slide" style="width:'+weddingCard.winW+'px;height:'+weddingCard.winH+'px;">'+$html+'</div>');
+           if(func){func()}
+        }
+
+
+
+        weddingCard.giftBox = function(){
+          var _status='';
+          if(!weddingCard.msgStatus){_status='style="opacity:0"'}
+          $('body').append('<div '+_status+' class="gift-info-first"></div>')
+          $.ajax({
+            url:weddingCard.api.gifts_Comments,
+            type:'get',
+            data:{
+              card_id:weddingCard.cardId
+            },
+            success:function(res){
+              weddingCard.dataStatus = true
+              weddingCard.userId = res.data.user_id
+              weddingCard.giftSouName = res.data.user_name
+              setTimeout(function(){
+                weddingCard.giftfirst(res.data.gifts)
+              },300)
+            }
+          })
+        }
+
+        weddingCard.giftfirst = function(gifts){
+          var _html='',i=0;
+              function giftTopPlay(){
+                if(i<gifts.length){
+                  if(gifts[i].card_gift){
+                    _html='<dl><dt><img src="'+gifts[i].card_gift.icon+'?imageView2/1/w/120/h/120"/></dt><dd><h5>'+gifts[i].giver_name+'送了'+gifts[i].card_gift.title+'</h5><p>'+gifts[i].card_gift.desc+'</p></dd></dl>';
+                  }else{
+                    _html='<dl style="background:rgba(249, 68, 85,0.9)"><dt><img src="http://qnm.hunliji.com/o_1bc6t9chl1ae118mhdavkm219pdc.png?imageView2/1/w/120/h/120"/></dt><dd><h5>'+gifts[i].giver_name+'</h5><p>送了'+gifts[i].price+'黄金红包</p></dd></dl>';
+                  }
+                  i++;
+                }else{
+                  i=0;
+                  if(gifts.length>0&&gifts[i].card_gift){
+                    _html='<dl><dt><img src="'+gifts[i].card_gift.icon+'?imageView2/1/w/120/h/120"/></dt><dd><h5>'+gifts[i].giver_name+'送了'+gifts[i].card_gift.title+'</h5><p>'+gifts[i].card_gift.desc+'</p></dd></dl>';
+                  }else{
+                    if(gifts[i]&&gifts[i].giver_name){
+                      _html='<dl style="background:rgba(249, 68, 85,0.9)"><dt><img src="http://qnm.hunliji.com/o_1bc6t9chl1ae118mhdavkm219pdc.png?imageView2/1/w/120/h/120"/></dt><dd><h5>'+gifts[i].giver_name+'</h5><p>送了'+gifts[i].price+'黄金红包</p></dd></dl>';
+                    }
+
+                  }
+                  i++;
+                }
+
+                $('.gift-info-first').append(_html)
+                if($('.gift-info-first dl').length>=2){
+                  $('.gift-info-first dl').eq(1).css({'-webkit-transform':'translateX('+weddingCard.winW+'px)'})
+                }else{$('.gift-info-first dl').css({'-webkit-transform':'translateX('+weddingCard.winW+'px)'})}
+                weddingCard.sto=setTimeout(function(){
+                    $('.gift-info-first dl').css({'-webkit-transform':'translateX(-'+weddingCard.winW+'px)'})
+                },300)
+                weddingCard.stz=setTimeout(function(){
+                  giftTopPlay()
+                },5200)
+                weddingCard.st=setTimeout(function(){
+                    if($('.gift-info-first dl').length>=2){
+                      $('.gift-info-first dl').eq(0).remove()
+                    }
+                },10000)
+              }
+              giftTopPlay()
+
+              if(weddingCard.winW<=320){//IP5
+                 $('.gift-info-first').css({'height':90})
+               }
+        }
+
+
+        weddingCard.module = function(result){
+          if(result.data.music&&result.data.music!=''){
+              var _music = result.data.music;
+              if(_music.img){
+                weddingCard.musicBtn = _music.img;
+                $('#playBtn img').attr('src',weddingCard.musicBtn);
+                console.log('music_img:'+weddingCard.musicBtn)
+              }
+              if(_music.audio){
+                $('#playBtn').show();
+                weddingCard.audio = _music.audio;
+                $('body').append('<audio id="playMusic" preload="load" autoplay loop src="'+weddingCard.audio+'">')
+
+                var _myvideo = document.getElementById('playMusic'),_mytime=0;
+                  _myvideo.addEventListener("timeupdate", function(){
+                      //_mytime = _myvideo.duration;
+                      if( _myvideo.currentTime>0&&weddingCard.auto==undefined){
+                        weddingCard.auto = 1;
+                        $('#playBtn').addClass('rotate')
+                      }
+                  });
+              }
+            }
+            $(document).on('touchend','#playBtn',function(){
+                if($(this).hasClass('rotate')){
+                  document.querySelector('#playMusic').pause();
+                  $(this).removeClass('rotate');
+                  weddingCard.auto = 1;
+              document.getElementById('playBtn').innerHTML='<img src="http://qnm.hunliji.com/o_1bepaofh0137f1e1ms0f1c7noc6c.png" />';
+                }else{
+                  document.querySelector('#playMusic').play();
+                  $(this).addClass('rotate');
+                  document.getElementById('playBtn').innerHTML='<img src="http://qnm.hunliji.com/Fv22sY5AC_4vHRZnxnOdRJDyRT2j" />';
+                }
+            })
+
+            if(result.data.guest_template==0){weddingCard.guestTemplate=0}
+            if(result.data.cash_gift_on==0){weddingCard.cashGiftOn=0}
+              if(result.data.card_gift_on==0){weddingCard.cardGiftOn=0}
+            if(result.data.page_icon){
+              weddingCard.pageIcon = result.data.page_icon;
+            }
+
+            if(result.data.cardInfo){
+              weddingCard.giftSouName = result.data.cardInfo.groom_name+'&'+result.data.cardInfo.bride_name;
+              weddingCard.writeCookie('_LatLngX',result.data.cardInfo.latitude);
+              weddingCard.writeCookie('_LatLngY',result.data.cardInfo.longtitude);
+              weddingCard.writeCookie('_add',result.data.cardInfo.place);
+              weddingCard.writeCookie('_bride',result.data.cardInfo.bride_name);
+              weddingCard.writeCookie('_groom',result.data.cardInfo.groom_name);
+              wxShare.setWeiXinData({
+                    "appId": "",
+                      "imgUrl" : ''+result.data.share_img+'?imageView2/2/w/200/h/200',
+                      "link" : location.href,
+                      "desc" : result.data.cardInfo.groom_name+'与'+result.data.cardInfo.bride_name+'要结婚了，诚挚邀请您光临。',
+                      "title" : result.data.cardInfo.groom_name+'与'+result.data.cardInfo.bride_name+'的结婚邀请'
+              });
+            }
+
+            weddingCard.stateBtn()
+        }
+
+        weddingCard.data = function(){
+
+            if(weddingCard.test=='page'){
+              weddingCard.url = weddingCard.api.page+weddingCard.cardId}
+            else if(weddingCard.test=='template'){
+              weddingCard.url = weddingCard.api.template+weddingCard.cardId
+            }else{
+              weddingCard.url = weddingCard.api.card+weddingCard.cardId;
+              if (weddingCard.speechId){
+                weddingCard.url += '/speech_id/' + weddingCard.speechId;
+                weddingCard.url += '/cash_gift_on/' + weddingCard.cash_gift_on;
+                weddingCard.url += '/timestamp/' + weddingCard.timestamp;
+                weddingCard.url += '/sign/' + weddingCard.sign;
+              }
+            }
+
+          weddingCard.imgCont=[];
+          $.ajax({
+            url : weddingCard.url,
+            type:'get',
+            success:function(result){
+              weddingCard.cardLength = result.data.page.length;
+              var _es = result.data.page.length-1;
+              weddingCard.eleCss = result.data.page[_es];
+
+              weddingCard.dataD = JSON.stringify(result.data.page);
+              weddingCard.module(result);
+              weddingCard.base();
+
+              result.data.page.forEach(function(val,index){
+                console.log(val)
+                val.layout.elements.forEach(function(v,i){
+                    if(weddingCard.cardId == 'NTUxNDMyZmlyZV9jbG91ZA')
+                        weddingCard.imgCont.push(v.img+'?imageView2/2/w/640/q/100')
+                    else
+                        weddingCard.imgCont.push(v.img+'?imageView2/2/w/640/q/80')
+                })
+              })
+              console.log(weddingCard.imgCont)
+              weddingCard.loading(weddingCard.imgCont,function(){
+                console.log('onloadimg完成')
+              })
+
+
+            }
+          })
+        }
+        weddingCard.rans = function(len) {
+            if(localStorage.getItem('rans')){
+              return localStorage.getItem('rans');
+            }else{
+              len = len || 32;
+          　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+          　　var maxPos = $chars.length;
+          　　var pwd = '';
+          　　for (i = 0; i < len; i++) {
+          　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+          　　}
+              localStorage.setItem('rans',pwd)
+          　　return pwd;
+            }
+        　　
+        }
+        weddingCard.r = 0;
+        weddingCard.base = function(){
+                $('#wrap').css({'width':weddingCard.winW,'height':weddingCard.winH});
+                var _size = weddingCard.winH/weddingCard.winW;
+                if(weddingCard.winH/weddingCard.winW<='1.63'){
+                    _size='1.63';
+                }
+
+                var _html='',_obj=[],layTemplate=[],_pageCont=weddingCard.getUrlParams(),_p=parseInt(_pageCont['page'])-1,_page;
+                _page = JSON.parse(weddingCard.dataD);
+                if(_p){weddingCard.r=_p}
+                for(var i=0;i<_page.length;i++){
+                  var _htmlIcon='',_layout = _page[i].layout,_bgimg='',$img='';
+                      layTemplate.push(_page[i].layout.layTemplate);
+                      if(_page[i].layout.layTemplate=='layTemplate_feedback'){
+                        weddingCard.fontColor = _page[i].layout.fontColor;
+                        weddingCard.iconColor = _page[i].layout.iconColor;
+                        weddingCard.hotelColor = _page[i].layout.hotelColor;
+                        weddingCard.sendColor = _page[i].layout.sendColor;
+                        weddingCard.reBgcolor = _page[i].layout.reBgcolor;
+                        weddingCard.valColor = _page[i].layout.valColor;
+                      }
+                    for(var s=0;s<_layout.elements.length;s++){
+                      var _animateAttr = '',
+                          _maskAttr = '',
+                          _img7n = '?imageView2/2/w/640/q/80';
+                      if(_layout.elements[s].delay){
+                        _animateAttr = '-webkit-animation:'+_layout.elements[s].animate+' 1000ms ease '+_layout.elements[s].delay+' both'
+                      }
+
+                      if(_layout.elements[s].mask){
+                        _maskAttr = '-webkit-mask-image:url('+_layout.elements[s].mask.img+');-webkit-mask-size:100% 100%;';
+                        _img7n = '?imageView2/2/w/'+_layout.elements[s].mask.width+'/h/'+_layout.elements[s].mask.height+'/q/80'
+                      }
+
+                      if(_layout.elements[s].img){
+                        $img = _layout.elements[s].img;
+                      }else{$img = _layout.elements[s].img;}
+
+                      var _x,_y,_w,_h,_r,_zOrder;
+                      if(_layout.elements[s].x){
+                        _x=_layout.elements[s].x;
+                        _y=_layout.elements[s].y;
+                        _w=_layout.elements[s].width;
+                        _r=_layout.elements[s].rotate;
+                      }
+
+                      if(_layout.elements[s].z_order){
+                        _zOrder = _layout.elements[s].z_order;
+                      }
+
+                      var _className='',_xP,
+                          _zP=0.00133*weddingCard.winH;
+                          if(_size<=1.63){
+                               var _xpt = (weddingCard.winW*1.63-weddingCard.winH)/(10/3)
+                               _xP = parseInt(_x/_size*_zP)+_xpt
+                            }else{_xP = parseInt(_x/_size*_zP)}
+                      if(_layout.elements[s].className){_className=_layout.elements[s].className}
+
+                      _htmlIcon+='<div class="icon '+_className+' '+_layout.elements[s].animate+' animated" style="top:'+_y/_size*_zP+'px;left:'+_xP+'px;'+_animateAttr+';z-index:'+_zOrder+'"><img style="-webkit-transform:rotate('+_r+'deg);width:'+_w/_size*_zP+'px;'+_maskAttr+'" src="'+$img+_img7n+'" ></div>';
+
+                    }
+                    if(_layout.backgroundHeader){
+                      _bgimg = '<img style="position:absolute;top:0;left:0" src="'+_layout.backgroundHeader+'"><img style="position:absolute;bottom:0;left:0" src="'+_layout.backgroundFooter+'">'
+                    }
+
+                    _html='<div class="lay-slide-bg">\
+                                <img style="width:100%;height:100%" src="'+_layout.background+'?imageView2/2/w/640/q/80">'+_bgimg+'\
+                              </div>\
+                              <div class="lay-slide-cont  '+_layout.layTemplate+'">'+_htmlIcon+'</div>';
+
+                    if(_layout.layTemplate=='layTemplate_feedback'){
+                        _obj.push(_html);
+                        weddingCard.cardObj = _obj
+                        appHtml()
+                    }else{
+                        _obj.push(_html);
+                        weddingCard.cardObj = _obj
+                    }
+
+
+                }
+
+                function appHtml(){
+                    if(weddingCard.guestTemplate==0){return false}
+                    $('.lay-slide-cont').append('<div class="feedback_info slideUp">\
+                        <div class="feedback_info_name">\
+                            <div class="feed_bd">\
+                                <em style="color:'+weddingCard.fontColor+'">您的真实姓名</em>\
+                                <input id="feedName" value="名字" type="text" style="color:'+weddingCard.valColor+'">\
+                            </div>\
+                            <div class="wline"></div></div>\
+                        <div class="feedback_info_status">\
+                            <div class="feed_bd">\
+                                <em style="color:'+weddingCard.fontColor+'">是否赴宴</em>\
+                                <span class="feedstatus reply_a" status="0" style="color:'+weddingCard.valColor+'">赴宴</span>\
+                            </div>\
+                            <i class="status_more" style="background:'+weddingCard.iconColor+'">\
+                                <img style="width:100%" src="http://qnm.hunliji.com/o_1ag7984u73ap1drhljdll71vmd1a.png">\
+                            </i>\
+                            <div class="wline"></div></div>\
+                        <div class="feedback_info_num">\
+                            <div class="feed_bd">\
+                                <em style="color:'+weddingCard.fontColor+'">赴宴人数</em>\
+                                <span class="feedstatus reply_b" status="1" style="color:'+weddingCard.valColor+'">1人</span>\
+                            </div>\
+                            <i class="num_more" style="background:'+weddingCard.iconColor+'">\
+                                <img style="width:100%" src="http://qnm.hunliji.com/o_1ag7984u73ap1drhljdll71vmd1a.png">\
+                            </i>\
+                            <div class="wline"></div>\
+                        </div>\
+                    </div>\
+                    <div class="feedback_msg slideUp">\
+                        <h3 style="color:'+weddingCard.fontColor+'">对新人说些什么</h3>\
+                        <div class="feedback_msg_txt" style="background:'+weddingCard.reBgcolor+'">\
+                            <textarea id="msg_textarea" style="color:'+weddingCard.valColor+'">收到请帖，祝你们白头偕老</textarea>\
+                        </div>\
+                        <div class="ajaxBtn">\
+                            <a class="ajaxBtn_send" style="width:100%;background:'+weddingCard.sendColor+'">立即发送</a>\
+                        </div><div class="appdown" style="display:block;width:100%;text-align:center;margin:8px auto 0;padding:8px 0;color:#fff;background:'+weddingCard.hotelColor+'"><i>制作属于你的专属请帖</i></div>\
+                    </div><a style="position:fixed;top:'+weddingCard.winW*1.077+'px;right:0;width:27px;background: transparent;" class="ajaxBtn_map"><img src="http://qnm.hunliji.com/o_1akibk24386k1lk81tdn8ihfo87.png"></a>')//weddingCard.iconColor
+
+            var _pt = (weddingCard.winW*1.63-weddingCard.winH)/(10/3),_top = weddingCard.winH*0.38;
+            if(_size<=1.63){
+                $('.feedback_info').css({'width':weddingCard.winH/_size*0.67,'top':_top+'px','left':weddingCard.winH/_size*0.1635+_pt});
+                $('.ajaxBtn').css({'margin-top':'20px'})
+               if(weddingCard.winW<=320){
+                  $('.feedback_msg').css({'width':weddingCard.winH/_size*0.67,'top':_top+weddingCard.winH*0.25+10+'px','left':weddingCard.winH/_size*0.1635+_pt});
+                  $('.ajaxBtn').css({'margin-top':'10px'})
+               }else{
+                  $('.feedback_msg').css({'width':weddingCard.winH/_size*0.67,'top':_top+weddingCard.winH*0.22+'px','left':weddingCard.winH/_size*0.1635+_pt});
+               }
+
+            }else{
+                $('.feedback_info').css({'top':weddingCard.winH/_size*0.66+'px','left':weddingCard.winH/_size*0.1635});
+
+                $('.feedback_msg').css({'top':weddingCard.winH/_size*1.008+'px','left':weddingCard.winH/_size*0.1635});
+
+            }
+            setTimeout(function(){
+                if(weddingCard.nameCard){
+                    $('#feedName').val(weddingCard.nameCard);
+                }
+                if(weddingCard.msgCard){
+                    $('#msg_textarea').val(weddingCard.msgCard);
+                }
+                if(weddingCard.statuscont){
+                    $('.reply_a').text(weddingCard.statuscont);
+                    $('.reply_a').attr('status',weddingCard.statustxt);
+                    if(weddingCard.statustxt!='0'){$('.feedback_info_num').hide();}
+                }
+                if(weddingCard.numcont){
+                    $('.reply_b').text(weddingCard.numcont);
+                    $('.reply_b').attr('status',weddingCard.numtxt);
+                }
+            },100)
+
+            $(document).on('touchend click touchstart','.appdown',function(){
+              if(weddingCard.make==0){
+                weddingCard.sdkData({
+                  action:'make',
+                  eventable_type:'CardV3',
+                  additional:{
+                    ip:weddingCard.ip,
+                    card_id:weddingCard.cardId,
+                    num:weddingCard.rans(32)
+                  }
+                },function(){
+                  location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=me.suncloud.marrymemo&ckey=CK1329239858554";
+                })
+                weddingCard.make++
+              }else{
+                location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=me.suncloud.marrymemo&ckey=CK1329239858554";
+              }
+
+            })
+
+
+            $(document).on('touchstart','#msg_textarea',function(){
+                function moveEnd(obj){
+                    obj.focus();
+                    var len = obj.value.length;
+                    if (document.selection) {
+                        var sel = obj.createTextRange();
+                        sel.moveStart('character',len);
+                        sel.collapse();
+                        sel.select();
+                    } else if (typeof obj.selectionStart == 'number' && typeof obj.selectionEnd == 'number') {
+                        obj.selectionStart = obj.selectionEnd = len;
+                    }
+
+                }
+                moveEnd(document.getElementById('msg_textarea'))
+                if(weddingCard.txtarea=='0'){
+                    weddingCard.txtarea = '1';
+                    $(this).val('');
+                }
+                weddingCard.touchBody='1';
+                /*setTimeout(function(){
+                  weddingCard.touchBody='0';
+                },1000)*/
+            })
+
+            $(document).on('blur','#msg_textarea',function(){
+                weddingCard.touchBody='0'
+            })
+
+            $(document).on('touchend','.lay-slide-bg',function(){
+               $('#msg_textarea').blur()
+               $('#feedName').blur()
+            })
+
+
+            $(document).on('touchstart','#feedName',function(){
+                $('#feedName').focus();
+                if(weddingCard.feedName=='0'){
+                    weddingCard.feedName = '1';
+                    $(this).val('');
+                }
+                weddingCard.touchBody='1';
+                setTimeout(function(){
+                  weddingCard.touchBody='0';
+                },1000)
+
+            })
+
+            $(document).on('touchend','.feedback_info_status',function(){
+                if(weddingCard.statusCard!=1){
+                    statusCard();
+                    $('#feedName').blur();
+                    $('#msg_textarea').blur();
+                }
+            })
+
+            $(document).on('touchend','.bgCard',function(){
+                setStatus();weddingCard.tap=0;
+                return false
+            })
+            weddingCard.tap=0;
+            $(document).on('touchstart','.feedback_info_num',function(){
+                if(weddingCard.tap<1){
+                    weddingCard.tap += 1;
+                    numMore();
+                }
+            })
+
+            $(document).on('touchend','.statusbtn',function(){
+                var _status = $(this).attr('status'),
+                    _statusC = $(this).text();
+                    weddingCard.statustxt = _status;
+                    weddingCard.statuscont = _statusC;
+
+                    if(_status=='1'||_status=='2'){
+                      $('.feedback_info_num').hide()
+                    }else{
+                      $('.feedback_info_num').show()
+                    }
+
+                    $('.reply_a').text(_statusC);
+                    $('.reply_a').attr('status',_status);
+                    setStatus();
+
+
+            })
+
+            $(document).on('touchend','.numbtn',function(){
+                var _status = $(this).attr('status'),
+                    _statusC = $(this).text();
+                    weddingCard.numtxt = _status;
+                    weddingCard.numcont = _statusC;
+                    $('.reply_b').text(_statusC);
+                    $('.reply_b').attr('status',_status);
+                    weddingCard.tap=0;
+                    setStatus();
+            })
+
+            $(document).on('input propertychange','#feedName',function(){
+                weddingCard.nameCard = $(this).val();
+            })
+
+            $(document).on('input propertychange','#msg_textarea',function(){
+                weddingCard.msgCard = $(this).val();
+            })
+
+            $(document).on('touchend','.ajaxBtn_map',function(){
+                location.href = "http://www.hunliji.com/p/wedding/Public/wap/invitationCard/card_map.html";
+            })
+            weddingCard.numSend=0;
+            weddingCard.msgopend=0;
+            $(document).on('touchend','.ajaxBtn_send',function(){
+                if(weddingCard.numSend<1&&weddingCard.msgopend==0){
+                  weddingCard.numSend++;
+                  replyData()
+                }
+            })
+
+
+            function replyData(){
+                if($('#feedName').val()!=''&&$('#feedName').val()!='名字'&&$('#msg_textarea').val()!=''){
+                    weddingCard.name = $('#feedName').val();
+                    weddingCard.bless = $('#msg_textarea').val();
+                    weddingCard.replya = $('.reply_a').attr('status');
+                    weddingCard.replyb = $('.reply_b').attr('status');
+                    console.log(weddingCard.name,weddingCard.bless)
+                    replySend({
+                      card_id:weddingCard.cardId,
+                      name:weddingCard.name,
+                      state:weddingCard.replya,
+                      wish_language:weddingCard.bless,
+                      count:weddingCard.replyb
+                    })
+                }else{
+                    weddingCard.msg('请填写相关信息');
+                    setTimeout(function(){weddingCard.numSend--},300)
+                }
+            }
+
+            function replySend(_data){console.log(1)
+              $.ajax({
+                url:weddingCard.api.reply,
+                type:'post',
+                data:_data,
+                success:function(result){
+                  console.log(result)
+                  weddingCard.numSend--;
+                  if(result.meta.status==200){weddingCard.msg('发送成功')}
+
+                }
+              })
+            }
+
+            function setStatus(){
+                $('.status_card').css({'-webkit-transform':'translate3d(0, '+weddingCard.winH+'px, 0)'});
+                $('.bgCard').css({'opacity':'0'});
+                weddingCard.statusCard=0;
+                setTimeout(function(){
+                    $('.status_card').remove();
+                    $('.bgCard').remove();
+                },600)
+            }
+
+            function statusCard(){
+                weddingCard.statusCard = 1;
+                var _html='<div class="bgCard" style="position:fixed;top:0;left:0;bottom:0;right:0;-webkit-transition-duration:600ms;opacity:0;z-index:99998;background:rgba(0,0,0,0.5)"></div><div class="status_card" style="text-align:center;position:fixed;bottom:0;left:0;padding:'+weddingCard.winH*0.05+'px 0;width:100%;background:#fff;z-index:99999;-webkit-transition-duration:600ms;-webkit-transform:translate3d(0,'+weddingCard.winH+'px,0)">\
+                        <p class="statusbtn" status="0">赴宴</p>\
+                        <p class="statusbtn" style="margin:0 15px" status="1">待定</p>\
+                        <p class="statusbtn" status="2">有事</p>\
+                    </div>';
+                $('body').append(_html);
+                setTimeout(function(){
+                    $('.status_card').css({'-webkit-transform':'translate3d(0, 0, 0)'});
+                    $('.bgCard').css({'opacity':'1'});
+                    if(weddingCard.statustxt){
+                      $('.statusbtn').eq(weddingCard.statustxt).addClass('ept')
+                    }else{
+                      $('.statusbtn').eq(0).addClass('ept')
+                    }
+                },100)
+            }
+
+            function numMore(){
+                weddingCard.statusCard = 1;
+                var _html='<div class="bgCard" style="position:fixed;top:0;left:0;bottom:0;right:0;-webkit-transition-duration:600ms;opacity:0;z-index:99998;background:rgba(0,0,0,0.5)"></div><div class="status_card" style="position:fixed;bottom:0;left:0;padding:'+weddingCard.winH*0.05+'px 0;width:100%;text-align:center;background:#fff;z-index:99999;-webkit-transition-duration:600ms;-webkit-transform:translate3d(0,'+weddingCard.winH+'px,0)">\
+                        <p class="numbtn" status="1" >1人</p>\
+                        <p class="numbtn" status="2" >2人</p>\
+                        <p class="numbtn" status="3" >3人</p><br>\
+                        <p class="numbtn" status="4" style="margin-top:16px;">4人</p>\
+                        <p class="numbtn" status="5" style="margin-top:16px;">5人</p>\
+                        <p class="numbtn" status="6" style="margin-top:16px;">6人</p>\
+                    </div>';
+                $('body').append(_html);
+                setTimeout(function(){
+                    $('.status_card').css({'-webkit-transform':'translate3d(0, 0, 0)'});
+                    $('.bgCard').css({'opacity':'1'});
+                    if(weddingCard.numtxt){
+                      $('.numbtn').eq(weddingCard.numtxt-1).addClass('ept')
+                    }else{
+                      $('.numbtn').eq(0).addClass('ept')
+                    }
+                },100)
+            }
+
+                }
+
+               function action(){
+                      if(_p&&_p==_page.length-1){
+                        console.log('最后一页');
+                        //appHtml()
+                        weddingCard.viewLastFun()
+                        weddingCard.userFrom()
+                        setTimeout(function(){
+                          $('.arrow-icon img').hide()
+                        },2000)
+                      }
+                      weddingCard.touch('body',function(){
+                        if(weddingCard.auto!=1&&document.getElementById('playMusic')){
+                          document.querySelector('#playMusic').play();
+                          $('#playBtn').addClass('rotate');
+                        }
+                      },function(){
+                        weddingCard.r==_page.length-1?$('body').addClass('lastPage'):$('body').removeClass('lastPage')
+                        if(weddingCard.touchBody=='1'){return false}
+                        if(endY>0){
+                              if(weddingCard.r>0&&!$('body').hasClass('playOnload')){
+                                  $('body').addClass('playOnload');
+                                  weddingCard.r--;
+                                  weddingCard.dom(_obj[weddingCard.r],function(){
+                                      setTimeout(function(){
+                                          $('.lay-slide-bg').show();
+                                          $('.lay-slide-cont').show();
+                                          $('.arrow-icon img').show()
+                                      },600)
+                                  });
+                                  $('.lay-slide').eq(1).css({'-webkit-transform':' translate3d(0, -'+weddingCard.winH+'px, 0)'});
+                                  setTimeout(function(){
+                                      $('.lay-slide').eq(0).css({'top':weddingCard.winH+'px'});
+                                      $('.lay-slide').eq(1).css({'-webkit-transition-duration':'450ms','-webkit-transform':'translate3d(0, 0, 0)'});
+                                  },100);
+                                  setTimeout(function(){
+                                      $('.lay-slide').eq(0).remove();
+                                      $('body').removeClass('playOnload');
+                                  },700)
+                              }
+
+
+
+                          }else{
+                              if(weddingCard.r<_obj.length-1&&!$('body').hasClass('playOnload')){
+                                  $('body').addClass('playOnload');
+                                  weddingCard.r++;
+                                  weddingCard.dom(_obj[weddingCard.r],function(){
+                                      setTimeout(function(){
+                                          $('.lay-slide-bg').show();
+                                          $('.lay-slide-cont').show();
+                                          if(weddingCard.r==_page.length-1){
+                                            console.log('最后一页');
+                                            if(weddingCard.st){
+                                              clearTimeout(weddingCard.sto)
+                                              clearTimeout(weddingCard.stz)
+                                              clearTimeout(weddingCard.st)
+                                              clearTimeout(weddingCard.stm)
+                                              console.log('已清除')
+                                            }
+                                              weddingCard.viewLastFun()
+                                              weddingCard.userFrom()
+                                            $('.arrow-icon img').hide()
+                                          }
+                                      },600)
+                                  });
+                                  $('.lay-slide').eq(1).css({'-webkit-transform':' translate3d(0, '+weddingCard.winH+'px, 0)'});
+                                  setTimeout(function(){
+                                      $('.lay-slide').eq(0).css({'-webkit-transition-duration':'800ms','-webkit-transform':'scale(0.5)'});
+                                      $('.lay-slide').eq(1).css({'-webkit-transform':'translate3d(0, 0, 0)'});
+                                  },100);
+                                  setTimeout(function(){
+                                      $('.lay-slide').eq(0).remove();
+                                      $('body').removeClass('playOnload');
+                                  },700)
+                              }
+
+                          }
+                      },function(){
+                          if($('body').hasClass('lastPage')&&weddingCard.guestTemplate==1){
+                              $('.stateBtn').css({'bottom':'-100px'})
+                          }else{
+                              $('.stateBtn').css({'bottom':'10px'})
+                          }
+
+                          if(weddingCard.r==0&&!$('body').hasClass('lastPage')){
+                            $('.gift-info-first').removeClass('haveGift')
+                            $('.stateBtn').css({'bottom':'-100px'})
+                          }else{
+                            $('.gift-info-first').addClass('haveGift')
+                          }
+                      })
+                  }
+
+                  weddingCard.dom(_obj[weddingCard.r],function(){
+
+                      var _imgs = [];
+                      for(var i=0;i<$('.lay-slide img').length;i++){
+                         _imgs.push($('.lay-slide img').eq(i).attr('src'))
+                      };
+                      _imgs.push($('.lay-slide img').eq(0).attr('src'));
+                      console.log(_imgs)
+                      weddingCard.loading(_imgs,function(){
+                         /* $('.lay-slide-cont').show();
+                          $('#wrap').show();
+                          $('.loadmore-loading').hide();
+                          if(weddingCard.pageIcon){
+                            $('.arrow-icon img').attr({'src':weddingCard.pageIcon});
+                            $('.arrow-icon').show()
+                          }else{$('.arrow-icon').show()}*/
+                      })
+                      setTimeout(function(){
+                         $('.lay-slide-cont').show();
+                          $('#wrap').show();
+                          $('.loadmore-loading').hide();
+                          if(weddingCard.pageIcon){
+                            $('.arrow-icon img').attr({'src':weddingCard.pageIcon});
+                            $('.arrow-icon').show()
+                          }else{$('.arrow-icon').show()}
+                      },2000)
+                  })
+                  action();
+
+                  (function() {//weixin auto playmusic
+                      WeixinJSBridge.invoke('getNetworkType', {}, function(e) {
+                              document.getElementById('playMusic').play();
+                          });
+                  })()
+        }
+
+       weddingCard.is_weixin = function(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+       weddingCard.viewLast=0;
+       weddingCard.viewLastFun = function(){
+
+
+          if(weddingCard.viewLast==0){
+            weddingCard.sdkData({
+              action:'view_last',
+              eventable_type:'CardV3',
+              additional:{
+                ip:weddingCard.ip,
+                card_id:weddingCard.cardId,
+                num:weddingCard.rans(32)
+              }
+            })
+            weddingCard.viewLast++;
+          }
+
+       }
+
+       weddingCard.userFrom = function(){
+        var state="";
+        if(weddingCard.cardGiftOn==0){
+          state="display:none"
+        }
+        if(weddingCard.guestTemplate==0){return false}
+          var _name='';
+            $('.animated').hide();
+            if(weddingCard.cashGiftName){_name='value="'+weddingCard.cashGiftName+'"'}
+            $('.lay-slide-cont').append('<div class="action-gift"><div class="gift-info">\
+              </div></div>\
+              \
+              <div class="area-chat"><div class="chat-cont">\
+              </div></div>\
+              <div class="feedback_new">\
+              <dl>\
+                <dt style="'+state+'"><span class="tabtn spk">发送回复</span><span style="position:relative" class="tabtn "><img style="position:absolute;top:-8px;right:-18px;width:30px;" src="http://qnm.hunliji.com/o_1b8tnchlc50711691e9h11rm143m.png"/>送“礼物”</span></dt>\
+                <dd>\
+                  <div class="fb_lay"><div class="fb_form">\
+                      <div class="fb_form_lay"><em>您的姓名</em><input class="reply_name rpyName01" type="text" maxlength="10" placeholder="请输入您的姓名"  '+_name+'  /></div>\
+                      <div class="fb_form_lay" style="margin-top:18px"><em style="line-height:30px;">是否赴宴</em><p class="reply_state"><i class="rpy ipk">赴宴</i><i class="rpy">待定</i><i class="rpy">有事</i></p></div>\
+                      <div class="fb_form_lay" style="margin-top:18px"><em style="line-height:36px;">赴宴人数</em><span class="reply_count" ><i>-</i><cite>1</cite><i class="ctw">+</i></span></div>\
+                      <div class="fb_form_lay fb_s" style="padding-bottom:18px"><em>甜蜜祝福</em><textarea class="reply_wish" placeholder='+weddingCard.wishCol+'></textarea></div>\
+                  </div>\
+                  <div class="fb_send">发送回复和祝福</div>\
+                  <div class="fb_link"><button class="fk_01"><i style="left:5px;" class="icon iconfont icon-daohang"></i>导航至婚宴地址</button><button class="fk_02"><i style="left:5px;" class="icon iconfont icon-plumage"></i>制作您的专属请帖</button></div><div style="text-align:center;margin-top:8px;"><a class="touchOther" style="margin-left:-15px;line-height:30px;font-size:14px;color:rgb(18,120,227)" >投诉与建议</a></div></div>\
+                  \
+                  <div class="fb_lay" style="display:none"><div class="fb_form">\
+                      <div class="fb_form_lay" ><em>赠送人</em><input class="reply_name rpyName02" type="text" placeholder="请输入您的姓名"/></div>\
+                      <div class="fb_form_lay"><em class="giftCol">“礼物”</em><div class="reply_state"><div class="gift_box">\
+                      <div class="area_gift"><div price="1.99" vid="1" class="gift" ><img src="http://qnm.hunliji.com/o_1b9fpk6p4tkpif2rlk1cel1693c.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
+                      <div class="area_gift"><div price="6.66" vid="3" class="gift" ><img src="http://qnm.hunliji.com/o_1b9g57rpb1hbo16jtmpjv20glsc.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
+                      <div class="area_gift"><div price="13.14" vid="8" class="gift gift_ko" ><img src="http://qnm.hunliji.com/o_1b9fpjilm1pd6nol1sva1iae16b57.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
+                      <div class="area_gift"><div price="19.99" vid="5" class="gift " ><img src="http://qnm.hunliji.com/o_1b9fpkrv45pa1l3i11pn4lr14mfm.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
+                      <div class="area_gift"><div price="66.66" vid="10" class="gift " ><img src="http://qnm.hunliji.com/o_1bf90h4gsmoa1vriukvi121ek77.jpg?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
+                      <div class="area_gift"><div price="99.99" vid="7" class="gift " ><img src="http://qnm.hunliji.com/o_1b986pu2o1117134814ra1bpr13i5c.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
+                      </div></div></div>\
+                  </div>\
+                  <div class="fb_send_gift">赠送礼物</div>\
+                  <div class="fb_link"><button class="fk_03"><i style="left:5px;" class="icon iconfont icon-daohang"></i>导航至婚宴地址</button><button class="fk_04"><i style="left:5px;" class="icon iconfont icon-plumage"></i>制作您的专属请帖</button></div><div style="color:#999;margin-top:8px;text-align:center;font-size:12px;line-height:14px;"><p>礼物金额将转入新人账户，婚礼纪平台不收取任何费用</p><a class="touchOther" style="display:inline-block;text-align:center;margin-top:6px;margin-left:-15px;line-height:30px;font-size:14px;color:rgb(18,120,227)" href="">投诉与建议</a></div></div>\
+                </dd>\
+              </dl>\
+              </div>')
+
+            $(document).on('touchstart','.touchOther',function(){
+              var  isApp = weddingCard.getUrlParams(),
+                   isAppState = isApp['is_app'];
+                   if(isAppState){
+                      location.href = "/p/wedding/Public/wap/invitationCard/feedBack/#/index/"+weddingCard.cardId+'?is_app=true'
+                   }else{
+                      location.href = "/p/wedding/Public/wap/invitationCard/feedBack/#/index/"+weddingCard.cardId
+                   }
+
+            })
+
+            if(weddingCard.getCookie('cashGiftName')){
+              $('.rpyName02').val(weddingCard.cashGiftName)
+            }
+            var fbTop=weddingCard.winW*0.63;
+            var _size = weddingCard.winH/weddingCard.winW;
+            $('.giftCol').css('line-height','150px')
+
+            if(_size<=1.52){//g5,mx
+              $('.feedback_new').css({'top':fbTop-60});
+              $('.area_gift').css({'width':'33%'})
+              $('.area-chat').css({'top':fbTop-120});
+              $('.gift-info').css({'height':100})
+              if(_size<=1.35){
+                $('.feedback_new').css({'top':fbTop-76});
+                $('.area-chat').css({'top':fbTop-140});
+                $('.gift-info').css({'height':90})
+              }else if(_size>1.3&&_size<1.45){
+                $('.gift-info').css({'height':80})
+                $('.fb_link button').css({'padding-left':'7px','padding-right':'7px'})
+                $('.icon-plumage').hide()
+                $('.icon-daohang').hide()
+              }
+              if(weddingCard.winW>410){
+                $('.fb_link button').css({'paddingLeft':33,'paddingRight':18})
+              }
+            }else if(_size>1.52&&_size<1.6){//xm,
+               $('.feedback_new').css({'top':fbTop-37});
+               $('.area-chat').css({'top':fbTop-102});
+               $('.area_gift').css({'width':'33%'})
+
+               if(weddingCard.winW<=320){//IP5
+                 $('.fb_form').css({'paddingTop':10})
+                 $('.gift-info').css({'height':90})
+
+                 $('.feedback_new').css({'top':fbTop-46});
+                 $('.area-chat').css({'top':fbTop-102});
+                 $('.fb_link button').css({'fontSize':12});
+
+                 $('.fb_form_lay.fb_s').css({'padding-bottom':0})
+                 $('.fb_link').css({'margin-top':5})
+                 $('.touchOther').css({'margin-top':0})
+               }
+
+            }else if(_size>1.6&&_size<1.63){//IP6PLUS
+              $('.feedback_new').css({'top':fbTop-37});
+              $('.area-chat').css({'top':fbTop-112});
+              $('.area_gift').css({'width':'33.3%'})
+              if(weddingCard.winW>380){
+                $('.fb_link button').css({'paddingLeft':33,'paddingRight':18})
+              }
+            }else{
+              $('.feedback_new').css({'top':fbTop});
+            }
+
+            $(document).on('touchstart','.rpy',function(){weddingCard.notouch = true
+              $('.rpy').removeClass('ipk')
+              $('.reply_name').blur()
+              $('.reply_wish').blur()
+              $(this).addClass('ipk')
+              var _css = weddingCard.eleCss.layout,
+                  _themeColor = _css.themeColor||'#ff705e';
+              $('.reply_state i.ipk').css({'color':_themeColor,'borderColor':_themeColor})
+              for(var r=0;r<$('.rpy').length;r++){
+                if(!$('.rpy').eq(r).hasClass('ipk')){
+                  $('.rpy').eq(r).css({'color':'#333','border':'none'})
+                }else{$('.rpy').eq(r).css({'border':'1px solid'})}
+              }
+              var _n = $('.reply_state i').index(this);
+                  weddingCard.replyData.state = _n;
+                  if(_n!=0){$('.fb_form_lay').eq(2).hide()}else{$('.fb_form_lay').eq(2).show()}
+            })
+            weddingCard.replyData.count='1';
+            $(document).on('touchstart','.reply_count i',function(e){weddingCard.notouch = true
+              if(!weddingCard.CountTouch){
+                 weddingCard.CountTouch = true
+                $('.reply_name').blur()
+                $('.reply_wish').blur()
+                var _i = $('.reply_count i').index(this),
+                _cite = $('.reply_count cite'),
+                _count = _cite.text();
+                switch(_i){
+                  case 0:
+                   _count=parseInt(_count)-1;
+                  break;
+                  case 1:
+                   _count=parseInt(_count)+1;
+                  break;
+                }
+                if(_count<=0){
+                  _count=0;
+                }
+                _cite.text(_count)
+                weddingCard.replyData.count = _count
+                setTimeout(function(){
+                  weddingCard.CountTouch = false
+                },100)
+              }
+
+            })
+
+
+            $(document).on('touchstart','.gift',function(){weddingCard.notouch = true
+              $('.reply_name').blur();
+              $('.gift').removeClass('gift_ko')
+              $(this).addClass('gift_ko')
+              var _css = weddingCard.eleCss.layout,
+                  _giftButton = _css.giftButton,
+                  _giftTxtColor='#ff705e',_giftTxtBtn='#ff705e';
+
+                  if(_giftButton&&_giftButton.textColor){
+                    _giftTxtColor = _giftButton.textColor
+                  }
+                  if(_giftButton&&_giftButton.fillColor){
+                    _giftTxtBtn = _giftButton.fillColor
+                  }
+
+                  $('.gift_ko').css({'color':_giftTxtColor,'border-color':_giftTxtBtn})
+
+                  weddingCard.giftId = $(this).attr('vid');
+                  weddingCard.giftPrice = $(this).attr('price');
+
+            })
+
+            $(document).on('touchstart','.tabtn',function(){weddingCard.notouch = true
+              var _i = $('.tabtn').index(this);
+              $('.tabtn').removeClass('spk');
+              $(this).addClass('spk');
+              $('.fb_lay').hide()
+              $('.fb_lay').eq(_i).show()
+
+              var _css = weddingCard.eleCss.layout,
+                  _themeColor = _css.themeColor||'#ff705e';
+
+                  switch(_i){
+                    case 0:
+                      $('.feedback_new dt span').css({'color':_themeColor,'border-color':_themeColor})
+                      $('.feedback_new dt span').eq(1).css({'color':_themeColor,'background':'#fff'})
+                      $('.spk').css({'color':'#fff','background':_themeColor});
+
+                    break;
+                    case 1:
+                      $('.feedback_new dt span').css({'color':_themeColor,'border-color':_themeColor})
+                      $('.feedback_new dt span').eq(0).css({'color':_themeColor,'background':'#fff'})
+                      $('.spk').css({'color':'#fff','background':_themeColor});
+                    break;
+                  }
+
+            })
+
+            $(document).on('touchend','.reply_name,.tabtn,.gift,.reply_count i,.reply_state i',function(){
+              weddingCard.notouch = false
+            })
+
+            $(document).on('touchstart','.reply_name',function(){
+              $('.reply_name').focus();
+              weddingCard.notouch = true
+            })
+            $(document).on('keyup','.rpyName01',function(){
+              weddingCard.replyData.name = $(this).val();
+              weddingCard.cashGiftName = $(this).val();
+            })
+
+            $(document).on('keyup','.rpyName02',function(){
+              weddingCard.giftName = $(this).val();
+            })
+
+            $(document).on('touchstart','.reply_wish',function(){
+              $('.reply_wish').focus();
+              weddingCard.notouch = true
+            })
+
+            $(document).on('blur','.reply_wish',function(){
+              weddingCard.wishCol = $(this).val()
+              if(weddingCard.wishCol==''){
+                  $('.reply_wish').attr('placeholder','')
+                }
+            })
+
+            weddingCard.giftCommentData()
+            weddingCard.cssUi()
+            weddingCard.ajaxGift()//send reply
+        }
+
+        weddingCard.replyData={
+                  card_id:'',
+                  name:'',
+                  state:'0',
+                  count:'',
+                  wish_language:''
+                }
+
+        weddingCard.sendState = false;
+        weddingCard.ajaxGift = function(){
+          weddingCard.replyData.card_id = weddingCard.cardId;
+          $(document).on('touchstart','.fb_send',function(){
+            weddingCard.notouch = true
+              setTimeout(function(){
+                  weddingCard.notouch = false
+              },100)
+            if(weddingCard.sendState==true){return false}else{weddingCard.sendState=true}
+
+            weddingCard.replyData.name = $('.rpyName01').val()
+            weddingCard.cashGiftName = $('.rpyName01').val();
+
+            weddingCard.replyData.wish_language = $('.reply_wish').val()
+            $('.rpyName02').val(weddingCard.replyData.name)
+            weddingCard.giftName = weddingCard.replyData.name
+              $('.reply_name').blur();
+              $('.reply_wish').blur();
+              weddingCard.replyData.wish_language = weddingCard.wishCol;
+
+              if(weddingCard.replyData.state==0){
+                if(weddingCard.replyData.name==''){
+                    weddingCard.msg('请填写姓名');
+                    weddingCard.sendState = false;
+                  }else if(weddingCard.replyData.count==''){
+                    weddingCard.msg('请填写赴宴人数');
+                    weddingCard.sendState = false;
+                  }else if(weddingCard.wishCol==''){
+                    $('.reply_wish').attr('placeholder','')
+                    weddingCard.msg('请填写祝福语');
+                    weddingCard.sendState = false;
+                  }else{
+                      weddingCard.giftSend(weddingCard.replyData)
+                  }
+              }else{
+                weddingCard.replyData.count='0';
+                if(weddingCard.replyData.name==''){
+                    weddingCard.msg('请填写姓名');
+                    weddingCard.sendState = false;
+                  }else if(weddingCard.wishCol==''){
+                    weddingCard.msg('请填写祝福语');
+                    weddingCard.sendState = false;
+                  }else{
+                      weddingCard.giftSend(weddingCard.replyData)
+                  }
+
+              }
+
+          })
+
+          $(document).on('touchend','.fk_01,.fk_03',function(){
+                var _title,_addr,_LatLngX,LatLngY;
+                weddingCard.writeCookie('map','bigmap')
+
+                _title = weddingCard.getCookie('_add');
+                _addr = weddingCard.getCookie('_groom')+' 和 '+weddingCard.getCookie('_bride')+' 诚挚邀请';
+                _LatLngX = weddingCard.getCookie('_LatLngX');
+                _LatLngY = weddingCard.getCookie('_LatLngY');
+
+                location.href='//apis.map.qq.com/tools/poimarker?type=0&marker=coord:'+_LatLngX+','+_LatLngY+';coordtype:3;title:'+_title+';addr:'+_addr+'&key=GMZBZ-ZCD3U-GY3VD-4PJK3-BRTK3-SQFWZ&referer=hunliji'
+          })
+
+          weddingCard.baiduToTX = function($lat, $lng){
+              $v = Math.PI * 3000.0 / 180.0;
+              $x = $lng - 0.0065;
+              $y = $lat - 0.006;
+
+              $z = Math.sqrt($x * $x + $y * $y) - 0.00002 * Math.sin($y * $v);
+              $t = Math.atan2($y, $x) - 0.000003 * Math.cos($x * $v);
+
+              return [$z * Math.sin($t),$z * Math.cos($t)]
+
+            }
+
+          $(document).on('touchend','.fb_send_gift',function(){
+                weddingCard.current_time = new Date().getTime()
+                weddingCard.giftName = $('.rpyName02').val()
+                $('.rpyName01').val(weddingCard.giftName)
+                weddingCard.replyData.name = weddingCard.giftName
+                weddingCard.wishCol = weddingCard.replyData.wish_language
+                if(!weddingCard.is_weixin()){
+                    weddingCard.msgMax('请在微信浏览器中打开','好的')
+                    return false
+                }
+                if(weddingCard.giftName==undefined||weddingCard.giftName==''){
+                  weddingCard.msg('请填写赠送人姓名');
+                }else if(weddingCard.giftId==undefined||weddingCard.giftId==''){
+                  weddingCard.msg('请选择赠送礼物');
+                }else{
+                    switch(weddingCard.giftId){
+                      case '1':
+                        weddingCard.gift = '一箱红枣'
+                      break;
+                      case '3':
+                        weddingCard.gift = '一车套套'
+                      break;
+                      case '8':
+                        weddingCard.gift = '一座城堡'
+                      break;
+                      case '5':
+                        weddingCard.gift = '一辆跑车'
+                      break;
+                      case '10':
+                        weddingCard.gift = '达康的祝福'
+                      break;
+                      case '7':
+                        weddingCard.gift = '月球蜜月游'
+                      break;
+                    }
+                    sessionStorage.backUrl = location.href
+                    weddingCard.giftPrice = $('.gift_ko').attr('price')
+                    weddingCard.pay({
+                      payName:weddingCard.giftName,
+                      paySouName:weddingCard.giftSouName,
+                      payApi: weddingCard.api.giftGive,
+                      payGift:weddingCard.gift,
+                      payParams: {
+                        current_time:weddingCard.current_time,
+                        card_gift2_id: weddingCard.giftId,
+                        card_id: weddingCard.cardId,
+                        giver_name: weddingCard.giftName,
+                        user_id: weddingCard.userId,
+                        wishes:weddingCard.wishCol
+                      },
+                      payMoney: weddingCard.giftPrice,
+                      payCallBack: '/p/wedding/Public/wap/activity/20170217-B-pay-success.html'
+
+                    })
+                }
+          })
+
+
+          $(document).on('touchend click touchstart','.fk_02,.fk_04',function(){
+            if(weddingCard.make==0){
+              weddingCard.sdkData({
+                action:'make',
+                eventable_type:'CardV3',
+                additional:{
+                  ip:weddingCard.ip,
+                  card_id:weddingCard.cardId,
+                  num:weddingCard.rans(32)
+                }
+              },function(){
+                location.href="/p/wedding/Public/wap/activity/hunliji_2d.html"
+              })
+              weddingCard.make++
+            }else{
+              location.href="/p/wedding/Public/wap/activity/hunliji_2d.html"
+            }
+          })
+
+        }
+
+
+        weddingCard.giftSend = function(_data){
+          $.ajax({
+            url:weddingCard.api.reply,
+            type:'post',
+            data:_data,
+            success:function(res){
+              if(res.meta.status=='200'){
+                weddingCard.sendState=false;
+                $('.rpy').removeClass('ipk');
+                $('.rpy').eq(0).addClass('ipk');
+                $('.fb_form_lay').eq(2).show()
+                var _css = weddingCard.eleCss.layout,
+                  _themeColor = _css.themeColor||'#ff705e';
+                for(var r=0;r<$('.rpy').length;r++){
+                  if(!$('.rpy').eq(r).hasClass('ipk')){
+                    $('.rpy').eq(r).css({'color':'#333','border':'none'})
+                  }else{$('.rpy').eq(r).css({'border':'1px solid','borderColor':_themeColor,'color':_themeColor})}
+                }
+                $('.reply_count cite').text('1');
+                $('.reply_wish').attr('placeholder',weddingCard.wishCol)
+                weddingCard.replyData.name='';
+                weddingCard.replyData.state='0';
+                weddingCard.replyData.count='1';
+
+                if(weddingCard.cardGiftOn==0){
+                  weddingCard.msg('已发送祝福');
+                  return false
+                }
+
+                if(weddingCard.getCookie('cardPrice')&&weddingCard.getCookie('cardGift')){
+
+                      weddingCard.msgMax('您的回复已发送成功','制作您的专属请帖',function(){
+                          weddingCard.sdkData({
+                            action:'make',
+                            eventable_type:'CardV3',
+                            additional:{
+                              ip:weddingCard.ip,
+                              card_id:weddingCard.cardId,
+                              num:weddingCard.rans(32)
+                            }
+                          },function(){
+                            location.href="/p/wedding/Public/wap/activity/hunliji_2d.html"
+                          })
+                      })
+
+                }else{
+
+                    weddingCard.msgMax2BTN(['送礼物','送礼金'])
+
+                }
+
+              }
+            }
+          })
+        }
+
+        weddingCard.cssUi = function(){
+          var _css = weddingCard.eleCss.layout,
+              _themeColor = _css.themeColor||'#ff705e',
+              _navButton = _css.navButton||'#ff705e',
+              _makeButton = _css.makeButton||'#ff705e',
+              _giftButton = _css.giftButton||'#ff705e';
+
+              $('.feedback_new dt span').css({'color':_themeColor,'border-color':_themeColor})
+              $('.spk').css({'color':'#fff','background':_themeColor});
+              $('.reply_state i.ipk').css({'color':_themeColor,'borderColor':_themeColor})
+              $('.ctw').css({'color':_themeColor})
+              $('.fb_send').css({'background':_themeColor})
+              $('.fb_send_gift').css({'background':_themeColor})
+
+              $('.gift_ko').css({'color':_giftButton.textColor,'border-color':_giftButton.fillColor})
+
+              $('.fk_01').css({'color':_navButton.textColor,'borderColor':_navButton.boxColor,'background':_navButton.fillColor})
+
+              $('.fk_02').css({'color':_makeButton.textColor,'borderColor':_makeButton.fillColor,'background':_makeButton.boxColor})
+
+              $('.fk_03').css({'color':_navButton.textColor,'borderColor':_navButton.boxColor,'background':_navButton.fillColor})
+
+              $('.fk_04').css({'color':_makeButton.textColor,'borderColor':_makeButton.fillColor,'background':_makeButton.boxColor})
+        }
+
+        weddingCard.giftCommentData = function(){
+          $.ajax({
+            url:weddingCard.api.gifts_Comments,
+            type:'get',
+            data:{
+              card_id:weddingCard.cardId
+            },
+            success:function(res){
+              console.log(res)
+              weddingCard.dataStatus = true
+              weddingCard.userId = res.data.user_id
+              weddingCard.giftSouName = res.data.user_name
+              setTimeout(function(){
+                weddingCard.giftTop(res.data.gifts)
+                weddingCard.giftCommentList(res.data.replies)
+              },300)
+
+            }
+          })
+        }
+
+        weddingCard.giftTop = function(gifts){
+          var _html='',i=0;
+
+              function giftTopPlay(){
+                if(i<gifts.length){
+                  if(gifts[i].card_gift){
+                    _html='<dl><dt><img src="'+gifts[i].card_gift.icon+'?imageView2/1/w/120/h/120"/></dt><dd><h5>'+gifts[i].giver_name+'送了'+gifts[i].card_gift.title+'</h5><p>'+gifts[i].card_gift.desc+'</p></dd></dl>';
+                  }else{
+                    _html='<dl style="background:#f94455"><dt><img src="http://qnm.hunliji.com/o_1bc6t9chl1ae118mhdavkm219pdc.png?imageView2/1/w/120/h/120"/></dt><dd><h5>'+gifts[i].giver_name+'</h5><p>送了'+gifts[i].price+'黄金红包</p></dd></dl>';
+                  }
+                  i++;
+                }else{
+                  i=0;
+                  if(gifts[i]&&gifts[i].card_gift){
+                    _html='<dl><dt><img src="'+gifts[i].card_gift.icon+'?imageView2/1/w/120/h/120"/></dt><dd><h5>'+gifts[i].giver_name+'送了'+gifts[i].card_gift.title+'</h5><p>'+gifts[i].card_gift.desc+'</p></dd></dl>';
+                  }else{
+                    if(gifts[i]&&gifts[i].giver_name){
+                        _html='<dl style="background:#f94455"><dt><img src="http://qnm.hunliji.com/o_1bc6t9chl1ae118mhdavkm219pdc.png?imageView2/1/w/120/h/120"/></dt><dd><h5>'+gifts[i].giver_name+'</h5><p>送了'+gifts[i].price+'黄金红包</p></dd></dl>';
+                    }
+
+                  }
+                  i++;
+                }
+
+                $('.gift-info').append(_html)
+                if($('.gift-info dl').length>=2){
+                  $('.gift-info dl').eq(1).css({'-webkit-transform':'translateX('+weddingCard.winW+'px)'})
+                }else{$('.gift-info dl').css({'-webkit-transform':'translateX('+weddingCard.winW+'px)'})}
+                weddingCard.sto=setTimeout(function(){
+                    $('.gift-info dl').css({'-webkit-transform':'translateX(-'+weddingCard.winW+'px)'})
+                },300)
+                weddingCard.stz=setTimeout(function(){
+                  giftTopPlay()
+                },5200)
+                weddingCard.st=setTimeout(function(){
+
+                    if($('.gift-info dl').length>=2){
+                      $('.gift-info dl').eq(0).remove()
+                    }
+
+                },10000)
+              }
+              giftTopPlay()
+
+        }
+
+        weddingCard.giftCommentList = function(replies){
+          weddingCard.giftStatus = true;
+          var _html='';
+              for(var i=0;i<replies.length;i++){
+                _html+='<div class="chat-cont-col"><i>'+replies[i].name+'</i><span>'+replies[i].wish_language+'</span></div>';
+              }
+              $('.chat-cont').append(_html)
+              var _top=0,_s=0;
+              function repliePlay(){
+                var _rep = $('.chat-cont-col').eq(_s).html();
+                    if(_rep!=null){
+                      _rep = '<div class="chat-cont-col">'+_rep+'</div>';
+                      _top = _top+parseInt($('.chat-cont-col').height()+3);_s=_s+1;
+                      setTimeout(function(){
+                        $('.chat-cont').css({'-webkit-transform':'translateY(-'+_top+'px)'})
+                       },100)
+                      setTimeout(function(){
+                        $('.chat-cont').append(_rep);
+                      },500)
+                      weddingCard.stm = setTimeout(function(){
+                        repliePlay()
+                      },3000)
+                    }
+              }
+              repliePlay()
+        }
+
+        weddingCard.giftData = function(){
+          $.ajax({
+            url:weddingCard.api.gifts,
+            type:'get',
+            success:function(res){
+              if(res.status.RetCode==0){
+                weddingCard.giftList(res.data.list)
+              }else{alert(res.status.msg)}
+            }
+          })
+        }
+
+        weddingCard.giftList=function(list){
+          var _html='';
+              for(var i=0;i<list.length;i++){
+                _html+='<div class="area_gift"><div price='+list[i].price+' vid='+list[i].id+' class="gift '+(i==0?"gift_ko":"")+'"><i class="icon iconfont icon-xuanzhong"></i><img src="'+list[i].icon+'?imageView2/1/w/120/h/120"/></div></div>';
+              }
+              $('.gift_box').append(_html)
+              var _css = weddingCard.eleCss.layout,
+                  _giftButton = _css.giftButton,
+                  _giftTxtColor = '#ff705e',
+                  _giftTxtBtn = '#ff705e';
+
+                  if(_giftButton&&_giftButton.textColor){
+                    _giftTxtColor = _giftButton.textColor
+                  }
+                  if(_giftButton&&_giftButton.fillColor){
+                    _giftTxtBtn = _giftButton.fillColor
+                  }
+
+                  $('.gift_ko').css({'color':_giftTxtColor,'border-color':_giftTxtBtn})
+
+         }
+
+        weddingCard.loading = function(arr,func){
+                    var _count=0;
+                    for(var i=0;i<arr.length;i++){
+                        var _img = new Image();
+                        _img.onload = function(){
+                            _count++;
+                            if(_count>=arr.length){if(func){func()}}
+                        }
+                        _img.src = arr[i];
+                    }
+                }
+
+        weddingCard.msgMax = function($obj,$btn,$state){
+          $('body').append('<div class="msgMax_box msgWin" style="position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:9999999"></div><div class="msgMax_box msgWin" style="margin:auto;position:fixed;top:0;left:0;bottom:0;right:0;width:75%;height:'+weddingCard.winH*0.25+'px;background:#fff;border-radius:8px;text-align:center;font-size:16px;z-index:9999999"><i class="clo" style="position:absolute;top:3px;right:3px;width:30px;"><img style="width:100%" src="http://qnm.hunliji.com/o_1bca08jdvno3i60598c701scqh.png"/></i><p style="padding:0 18px;display:table-cell;vertical-align:middle;color:#666;width:'+weddingCard.winW*0.75+'px;height:'+weddingCard.winH*0.18+'px;line-height:20px;">'+$obj+'</p><div class="msgMax_btnx" style="color:#ff705e;border-top:1px solid #e5e5e5;line-height:'+weddingCard.winH*0.07+'px;">'+$btn+'</div></div>')
+
+          $(document).on('touchstart','.msgMax_btnx',function(){
+            $('.msgWin').remove()
+            if($state){$state()}
+          })
+          $(document).on('touchstart','.clo',function(){
+            $('.msgWin').remove()
+          })
+
+
+        }
+
+        weddingCard.msgX=0
+        weddingCard.msg = function(_cont,_status){
+              if(weddingCard.msgX==0){
+                  $('body').append('<div class="msg slideUp animated" style="position:fixed;top:0;left:0;bottom:0;right:0;margin:auto;width:160px;height:100px;line-height:100px;text-align:center;background:rgba(0,0,0,0.6);color:#fff;font-size:14px;border-radius:10px;z-index:9999999">'+_cont+'</div>');
+                  weddingCard.msgopend=1;
+                  function msgClo($t){
+                    setTimeout(function(){
+                      $('.msg').removeClass('slideUp').addClass('fadeOutDown');
+                      setTimeout(function(){
+                        $('.msg').remove();
+                        weddingCard.msgopend=0;
+                      },600)
+                    },$t)
+                  }
+                  if(_status){
+                    $('.msg').append('<em class="msgClosed" style="position:absolute;top:6px;right:6px;line-height:20px;color:#ddd">关闭</em>')
+                    $('.msgClosed').on('touchstart',function(){
+                      msgClo(0)
+                    })
+                  }else{
+                      msgClo(1200)
+                  }
+                  weddingCard.msgX=1
+                  setTimeout(function(){
+                    weddingCard.msgX=0
+                  },1800)
+              }
+
+            }
+
+        weddingCard.touch = function(_obj,funStart,funMove,funEnd){
+            $(_obj).on('touchstart',function(){
+              touchStart(event)
+            });
+            $(_obj).on('touchmove',function(){
+              touchMove(event)
+            });
+            $(_obj).on('touchend',function(){
+              touchEnd(event)
+            })
+
+            function touchStart(event) {
+                event.preventDefault();
+                var touch = event.touches[0];
+                    startY = touch.pageY;
+                    startX = touch.pageX;
+                    if(funStart&&!weddingCard.notouch){funStart()}
+            };
+            function touchMove(event){
+                event.preventDefault();
+                var touch = event.touches[0],_scrollMath;
+                    endY = touch.pageY-startY;
+                    if(funMove&&!weddingCard.notouch){funMove()}
+
+            };
+            function touchEnd(){
+                event.preventDefault();
+                if(funEnd&&!weddingCard.notouch){funEnd()}
+            };
+        }
+
+        weddingCard.data();
+
+        weddingCard.sdkData = function(_data,_met){
+          var obj = '{"events":['+JSON.stringify(_data)+']}';
+          if(weddingCard.isPreview==undefined){
+            $.ajax({
+              url:weddingCard.api.sdkData,
+              type:'post',
+              data:obj,
+              success:function(result){
+                console.log(result)
+                if(_met){_met()}
+              }
+            })
+          }
+
+        }
+
+        weddingCard.sdk = (function(){
+          $.ajax({
+                url:'https://www.hunliji.com/sms/ip',
+                type:'get',
+                success:function(result){
+                  weddingCard.ip = result;
+                }
+            })
+
+          setTimeout(function(){
+            weddingCard.sdkData({
+              action:'view',
+              eventable_type:'CardV3',
+              additional:{
+                ip: weddingCard.ip,
+                card_id:weddingCard.cardId,
+                num:weddingCard.rans(32)
+              }
+            })
+          },3000)
+        })()
+
+
+
+ </script>
+
+</body>
+</html>

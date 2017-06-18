@@ -1,0 +1,4 @@
+.stateBtn {
+    -webkit-transition-duration: 1s;
+    display: none !important;
+}
