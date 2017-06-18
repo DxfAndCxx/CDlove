@@ -19,7 +19,6 @@ def cardID():
         "msg": "success"
       },
       "data": {
-        "guest_template": 1,
         "page": [
           {
             "id": 25273701,
@@ -1194,4 +1193,4 @@ def cardID():
       "current_time": 1497799784
     })
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5200, debug=True)
+    app.run(host='127.0.0.1', port=5200, debug=True)
