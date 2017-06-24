@@ -287,6 +287,17 @@
                 }
         }
 
+    function randomString(len) {
+    　　len = len || 32;
+    　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+    　　var maxPos = $chars.length;
+    　　var pwd = '';
+    　　for (i = 0; i < len; i++) {
+    　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+    　　}
+    　　return pwd;
+    }
+
 
     var weddingCard = {};
         weddingCard.txtarea='0';
@@ -866,7 +877,7 @@
               weddingCard.url = weddingCard.api.template+weddingCard.cardId
             }
             else{
-              weddingCard.url = 'config/info.json?vvv';
+              weddingCard.url = 'config/info.json?'+randomString(10);
               if (weddingCard.speechId){
                 weddingCard.url += '/speech_id/' + weddingCard.speechId;
                 weddingCard.url += '/cash_gift_on/' + weddingCard.cash_gift_on;
