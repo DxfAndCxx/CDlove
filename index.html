@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="static/css/wrap_common.css">
   <link rel="stylesheet" href="static/css/animate_v05.28.css">
   <link rel="stylesheet" href="static/css/main.css">
-  <link rel="icon" href="http://qnm.hunliji.com/o_1ah8sh0g58hqcgc1sfm1clv1t34c.ico" type="image/x-icon">
+  <link rel="icon" href="static/images/2_1.jpg" type="image/x-icon">
 
   <style>
    body {background:#000}
@@ -257,15 +257,15 @@
   </style>
 </head>
 <body>
-    <img class="goFirst" src="http://qnm.hunliji.com/o_1bc9tblu317tvhlk1osl136h13mrc.png"/>
+    <img class="goFirst" src="static/images/goFirst.png"/>
     <div class="loadmore-loading"><div></div><p></p></div>
     <div id="wrap">
         <div class="wrap-main"></div>
     </div>
     <div class="arrow-icon">
-        <img src="http://qnm.hunliji.com/o_1agpam0fsibn2814j110101jcr7.png">
+        <img src="static/images/arrow.png">
     </div>
-    <div id="playBtn" class="playing"><img src="http://qnm.hunliji.com/Fv22sY5AC_4vHRZnxnOdRJDyRT2j"></div>
+    <div id="playBtn" class="playing"><img src="static/images/playBtn"></div>
     <script src="static/js/app.js"></script>
     <script src="static/js/zepto.js"></script>
     <script src="static/js/jweixin-1.0.0.js"></script>
@@ -275,11 +275,14 @@
     <!-- <script src="//map.qq.com/api/js?v=2.exp&libraries=convertor"></script> -->
     <script>
 
+    URL_PREFIX = 'http://cdn.fengidri.me/dxf_cxx/marry/album/';
+    //URL_PREFIX = 'http://192.168.199.109/1080p/';
+
     function stopMusic(){
           if($('#playBtn').hasClass('rotate')){
                   document.querySelector('#playMusic').pause();
                   $('#playBtn').removeClass('rotate');
-                  document.getElementById('playBtn').innerHTML='<img src="http://qnm.hunliji.com/o_1bepaofh0137f1e1ms0f1c7noc6c.png" />';
+                  document.getElementById('playBtn').innerHTML='<img src="static/images/playBtn.png" />';
                   weddingCard.auto = 1;
                 }
         }
@@ -363,7 +366,7 @@
           'template':'/p/wedding/index.php/Home/APIInvationV2/previewTemplate/id/',
           'card':_url+'/p/wedding/index.php/Home/APIInvationV2/pageListByCardId/id/',
           'reply':'/p/wedding/index.php/Home/APIInvationV2/reply',
-          'sdkData':'/v1/api/app/tracker/batch.json',
+          'sdkData':'config/batch.json',
           'gifts':'/p/wedding/index.php/Home/APICardGift2/index',
           'gifts_Comments':_url+'/p/wedding/index.php/Home/APICardGift2/gifts_and_replies',
           'giftGive':'/p/wedding/index.php/Home/APICardGift2/give',
@@ -460,63 +463,6 @@
             weddingCard.notouch = true;
 
         }
-
-        weddingCard.giftWin = function($name){
-
-            var _w='70%';
-            var _inpH='height:'+weddingCard.winW*0.135+'px;line-height:'+weddingCard.winW*0.135+'px;';
-
-            $('body').append('<div class="msgMax_box" style="position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:999999"></div><div class="msgMax_box winPrice winGift" style="height:'+weddingCard.winW*1.38+'px"><i class="closed" style="position:absolute;top:0;right:0;width:30px;"><img style="width:100%" src="http://qnm.hunliji.com/o_1bd1htffi1vvc7p5ssf17gpu81c.png"/></i><div style="padding:'+weddingCard.winW*0.31+'px 0 15px;width:'+weddingCard.winW*0.78+'px;margin:auto;">\
-            <div><div style="padding:0 8px;border-radius:8px;'+_inpH+'background:#fff"><em style="color:#f83144">*</em> 赠送人<input oninput="if(value.length>10)value=value.slice(0,10)" placeholder='+($name||'请输入您的姓名')+' class="cashGiftName" style="margin-left:26px;border:none;width:64%;" type="text"/></div></div>\
-            <div class="layGift" style="margin-top:'+weddingCard.winW*0.1+'px;">\
-                    <p class="giftBtn">\
-                      <span pice="1.99" vid="1">\
-                        <img src="http://qnm.hunliji.com/o_1b9fpk6p4tkpif2rlk1cel1693c.png?imageView2/1/w/200/h/200"/>\
-                      </span>\
-                    </p>\
-                    <p class="giftBtn">\
-                      <span pice="6.66" vid="3">\
-                        <img src="http://qnm.hunliji.com/o_1b9g57rpb1hbo16jtmpjv20glsc.png?imageView2/1/w/200/h/200"/>\
-                      </span>\
-                    </p>\
-                    <p class="giftBtn">\
-                      <span class="kt" pice="13.14" vid="8">\
-                        <img src="http://qnm.hunliji.com/o_1b9fpjilm1pd6nol1sva1iae16b57.png?imageView2/1/w/200/h/200"/>\
-                      </span>\
-                    </p>\
-                </div>\
-                <div class="layGift">\
-                    <p class="giftBtn">\
-                      <span pice="19.99" vid="5">\
-                        <img src="http://qnm.hunliji.com/o_1b9fpkrv45pa1l3i11pn4lr14mfm.png?imageView2/1/w/200/h/200"/>\
-                      </span>\
-                    </p>\
-                    <p class="giftBtn">\
-                      <span pice="66.66" vid="10">\
-                        <img src="http://qnm.hunliji.com/o_1bf90h4gsmoa1vriukvi121ek77.jpg?imageView2/1/w/200/h/200"/>\
-                      </span>\
-                    </p>\
-                    <p class="giftBtn">\
-                      <span pice="99.99" vid="7">\
-                        <img src="http://qnm.hunliji.com/o_1b986pu2o1117134814ra1bpr13i5c.png?imageView2/1/w/200/h/200"/>\
-                      </span>\
-                    </p>\
-                </div>\
-            <div style="position:relative;margin:12px 0;overflow:hidden;"><img style="position:absolute;top:3px;left:8px;width:'+weddingCard.winW*0.0375+'px" src="http://qnm.hunliji.com/o_1bd1j88a33gu1dcrhhj1sal1kvh.png"/><p style="float:right;width:'+weddingCard.winW*0.7+'px;color:#f83144;">小主放心送，礼物金额将全部转至新人的婚礼纪账户~</p></div><div class="msgMax_btn"><button class="giftSend" style="display:block;width:'+weddingCard.winW*0.78+'px;margin:auto;color:#fff;background:#f83144;border:none;text-align:center;height:'+weddingCard.winW*0.1+'px;line-height:'+weddingCard.winW*0.1+'px;border-radius:6px;font-size:14px;">赠送礼物</button></div></div>')
-
-            weddingCard.touchFocus('.cashGiftName');
-            $(document).on('touchstart','.giftBtn span',function(){
-                  $('.cashGiftName').blur();
-                  $('.giftBtn span').removeClass('kt')
-                  $(this).addClass('kt')
-
-                  weddingCard.giftId = $(this).attr('vid');
-                  weddingCard.giftPrice = $(this).attr('pice');
-
-               })
-               weddingCard.notouch = true;
-
-            }
 
         weddingCard.stateBtn = function(){
             var _pos = 'display:-webkit-box;position:fixed;bottom:-100px;width:100%;z-index:999',
@@ -691,10 +637,6 @@
               weddingCard.priceWin(weddingCard.cashGiftName)
             });
 
-            doRemove('.gift_nav',function(){
-              weddingCard.giftWin(weddingCard.cashGiftName)
-            });
-
             doRemove('.close_nav',function(){
               weddingCard.notouch = true
               setTimeout(function(){
@@ -742,6 +684,7 @@
             })
 
             $(document).on('touchend','.goFirst',function(){
+              console.log('--');
               weddingCard.notouch = true
               setTimeout(function(){
                   weddingCard.notouch = false
@@ -857,13 +800,13 @@
           if(result.data.music&&result.data.music!=''){
               var _music = result.data.music;
               if(_music.img){
-                weddingCard.musicBtn = _music.img;
-                $('#playBtn img').attr('src',weddingCard.musicBtn);
+                weddingCard.musicBtn = URL_PREFIX + _music.img;
+                $('#playBtn img').attr('src', weddingCard.musicBtn);
                 console.log('music_img:'+weddingCard.musicBtn)
               }
               if(_music.audio){
                 $('#playBtn').show();
-                weddingCard.audio = _music.audio;
+                weddingCard.audio = URL_PREFIX + _music.audio;
                 $('body').append('<audio id="playMusic" preload="load" autoplay loop src="'+weddingCard.audio+'">')
 
                 var _myvideo = document.getElementById('playMusic'),_mytime=0;
@@ -905,7 +848,7 @@
               weddingCard.writeCookie('_groom',result.data.cardInfo.groom_name);
               wxShare.setWeiXinData({
                     "appId": "",
-                      "imgUrl" : ''+result.data.share_img+'?imageView2/2/w/200/h/200',
+                      "imgUrl" : result.data.share_img+'?imageView2/2/w/200/h/200',
                       "link" : location.href,
                       "desc" : result.data.cardInfo.groom_name+'与'+result.data.cardInfo.bride_name+'要结婚了，诚挚邀请您光临。',
                       "title" : result.data.cardInfo.groom_name+'与'+result.data.cardInfo.bride_name+'的结婚邀请'
@@ -921,7 +864,8 @@
               weddingCard.url = weddingCard.api.page+weddingCard.cardId}
             else if(weddingCard.test=='template'){
               weddingCard.url = weddingCard.api.template+weddingCard.cardId
-            }else{
+            }
+            else{
               weddingCard.url = 'config/info.json';
               if (weddingCard.speechId){
                 weddingCard.url += '/speech_id/' + weddingCard.speechId;
@@ -1009,13 +953,14 @@
                       }
 
                       if(_layout.elements[s].mask){
-                        _maskAttr = '-webkit-mask-image:url('+_layout.elements[s].mask.img+');-webkit-mask-size:100% 100%;';
+                        _maskAttr = '-webkit-mask-image:url('+URL_PREFIX+_layout.elements[s].mask.img+');-webkit-mask-size:100% 100%;';
                         _img7n = '?imageView2/2/w/'+_layout.elements[s].mask.width+'/h/'+_layout.elements[s].mask.height+'/q/80'
                       }
 
-                      if(_layout.elements[s].img){
-                        $img = _layout.elements[s].img;
-                      }else{$img = _layout.elements[s].img;}
+                      $img = _layout.elements[s].img;
+                      if($img.substr(0, 7) != 'http://'){
+                        $img = URL_PREFIX + $img;
+                      }
 
                       var _x,_y,_w,_h,_r,_zOrder;
                       if(_layout.elements[s].x){
@@ -1045,7 +990,7 @@
                     }
 
                     _html='<div class="lay-slide-bg">\
-                                <img style="width:100%;height:100%" src="'+_layout.background+'?imageView2/2/w/640/q/80">'+_bgimg+'\
+                                <img style="width:100%;height:100%" src="'+URL_PREFIX+_layout.background+'?imageView2/2/w/640/q/80">'+_bgimg+'\
                               </div>\
                               <div class="lay-slide-cont  '+_layout.layTemplate+'">'+_htmlIcon+'</div>';
 
@@ -1063,43 +1008,6 @@
 
                 function appHtml(){
                     if(weddingCard.guestTemplate==0){return false}
-                    $('.lay-slide-cont').append('<div class="feedback_info slideUp">\
-                        <div class="feedback_info_name">\
-                            <div class="feed_bd">\
-                                <em style="color:'+weddingCard.fontColor+'">您的真实姓名</em>\
-                                <input id="feedName" value="名字" type="text" style="color:'+weddingCard.valColor+'">\
-                            </div>\
-                            <div class="wline"></div></div>\
-                        <div class="feedback_info_status">\
-                            <div class="feed_bd">\
-                                <em style="color:'+weddingCard.fontColor+'">是否赴宴</em>\
-                                <span class="feedstatus reply_a" status="0" style="color:'+weddingCard.valColor+'">赴宴</span>\
-                            </div>\
-                            <i class="status_more" style="background:'+weddingCard.iconColor+'">\
-                                <img style="width:100%" src="http://qnm.hunliji.com/o_1ag7984u73ap1drhljdll71vmd1a.png">\
-                            </i>\
-                            <div class="wline"></div></div>\
-                        <div class="feedback_info_num">\
-                            <div class="feed_bd">\
-                                <em style="color:'+weddingCard.fontColor+'">赴宴人数</em>\
-                                <span class="feedstatus reply_b" status="1" style="color:'+weddingCard.valColor+'">1人</span>\
-                            </div>\
-                            <i class="num_more" style="background:'+weddingCard.iconColor+'">\
-                                <img style="width:100%" src="http://qnm.hunliji.com/o_1ag7984u73ap1drhljdll71vmd1a.png">\
-                            </i>\
-                            <div class="wline"></div>\
-                        </div>\
-                    </div>\
-                    <div class="feedback_msg slideUp">\
-                        <h3 style="color:'+weddingCard.fontColor+'">对新人说些什么</h3>\
-                        <div class="feedback_msg_txt" style="background:'+weddingCard.reBgcolor+'">\
-                            <textarea id="msg_textarea" style="color:'+weddingCard.valColor+'">收到请帖，祝你们白头偕老</textarea>\
-                        </div>\
-                        <div class="ajaxBtn">\
-                            <a class="ajaxBtn_send" style="width:100%;background:'+weddingCard.sendColor+'">立即发送</a>\
-                        </div><div class="appdown" style="display:block;width:100%;text-align:center;margin:8px auto 0;padding:8px 0;color:#fff;background:'+weddingCard.hotelColor+'"><i>制作属于你的专属请帖</i></div>\
-                    </div><a style="position:fixed;top:'+weddingCard.winW*1.077+'px;right:0;width:27px;background: transparent;" class="ajaxBtn_map"><img src="http://qnm.hunliji.com/o_1akibk24386k1lk81tdn8ihfo87.png"></a>')//weddingCard.iconColor
-
             var _pt = (weddingCard.winW*1.63-weddingCard.winH)/(10/3),_top = weddingCard.winH*0.38;
             if(_size<=1.63){
                 $('.feedback_info').css({'width':weddingCard.winH/_size*0.67,'top':_top+'px','left':weddingCard.winH/_size*0.1635+_pt});
@@ -1477,7 +1385,7 @@
                           $('#wrap').show();
                           $('.loadmore-loading').hide();
                           if(weddingCard.pageIcon){
-                            $('.arrow-icon img').attr({'src':weddingCard.pageIcon});
+                            $('.arrow-icon img').attr({'src': URL_PREFIX + weddingCard.pageIcon});
                             $('.arrow-icon').show()
                           }else{$('.arrow-icon').show()}
                       },2000)
@@ -1524,236 +1432,6 @@
           state="display:none"
         }
         if(weddingCard.guestTemplate==0){return false}
-          var _name='';
-            $('.animated').hide();
-            if(weddingCard.cashGiftName){_name='value="'+weddingCard.cashGiftName+'"'}
-            $('.lay-slide-cont').append('<div class="action-gift"><div class="gift-info">\
-              </div></div>\
-              \
-              <div class="area-chat"><div class="chat-cont">\
-              </div></div>\
-              <div class="feedback_new">\
-              <dl>\
-                <dt style="'+state+'"><span class="tabtn spk">发送回复</span><span style="position:relative" class="tabtn "><img style="position:absolute;top:-8px;right:-18px;width:30px;" src="http://qnm.hunliji.com/o_1b8tnchlc50711691e9h11rm143m.png"/>送“礼物”</span></dt>\
-                <dd>\
-                  <div class="fb_lay"><div class="fb_form">\
-                      <div class="fb_form_lay"><em>您的姓名</em><input class="reply_name rpyName01" type="text" maxlength="10" placeholder="请输入您的姓名"  '+_name+'  /></div>\
-                      <div class="fb_form_lay" style="margin-top:18px"><em style="line-height:30px;">是否赴宴</em><p class="reply_state"><i class="rpy ipk">赴宴</i><i class="rpy">待定</i><i class="rpy">有事</i></p></div>\
-                      <div class="fb_form_lay" style="margin-top:18px"><em style="line-height:36px;">赴宴人数</em><span class="reply_count" ><i>-</i><cite>1</cite><i class="ctw">+</i></span></div>\
-                      <div class="fb_form_lay fb_s" style="padding-bottom:18px"><em>甜蜜祝福</em><textarea class="reply_wish" placeholder='+weddingCard.wishCol+'></textarea></div>\
-                  </div>\
-                  <div class="fb_send">发送回复和祝福</div>\
-                  <div class="fb_link"><button class="fk_01"><i style="left:5px;" class="icon iconfont icon-daohang"></i>导航至婚宴地址</button><button class="fk_02"><i style="left:5px;" class="icon iconfont icon-plumage"></i>制作您的专属请帖</button></div><div style="text-align:center;margin-top:8px;"><a class="touchOther" style="margin-left:-15px;line-height:30px;font-size:14px;color:rgb(18,120,227)" >投诉与建议</a></div></div>\
-                  \
-                  <div class="fb_lay" style="display:none"><div class="fb_form">\
-                      <div class="fb_form_lay" ><em>赠送人</em><input class="reply_name rpyName02" type="text" placeholder="请输入您的姓名"/></div>\
-                      <div class="fb_form_lay"><em class="giftCol">“礼物”</em><div class="reply_state"><div class="gift_box">\
-                      <div class="area_gift"><div price="1.99" vid="1" class="gift" ><img src="http://qnm.hunliji.com/o_1b9fpk6p4tkpif2rlk1cel1693c.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
-                      <div class="area_gift"><div price="6.66" vid="3" class="gift" ><img src="http://qnm.hunliji.com/o_1b9g57rpb1hbo16jtmpjv20glsc.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
-                      <div class="area_gift"><div price="13.14" vid="8" class="gift gift_ko" ><img src="http://qnm.hunliji.com/o_1b9fpjilm1pd6nol1sva1iae16b57.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
-                      <div class="area_gift"><div price="19.99" vid="5" class="gift " ><img src="http://qnm.hunliji.com/o_1b9fpkrv45pa1l3i11pn4lr14mfm.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
-                      <div class="area_gift"><div price="66.66" vid="10" class="gift " ><img src="http://qnm.hunliji.com/o_1bf90h4gsmoa1vriukvi121ek77.jpg?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
-                      <div class="area_gift"><div price="99.99" vid="7" class="gift " ><img src="http://qnm.hunliji.com/o_1b986pu2o1117134814ra1bpr13i5c.png?imageView2/1/w/200/h/200"/><i class="icon iconfont icon-xuanzhong"></i></div></div>\
-                      </div></div></div>\
-                  </div>\
-                  <div class="fb_send_gift">赠送礼物</div>\
-                  <div class="fb_link"><button class="fk_03"><i style="left:5px;" class="icon iconfont icon-daohang"></i>导航至婚宴地址</button><button class="fk_04"><i style="left:5px;" class="icon iconfont icon-plumage"></i>制作您的专属请帖</button></div><div style="color:#999;margin-top:8px;text-align:center;font-size:12px;line-height:14px;"><p>礼物金额将转入新人账户，婚礼纪平台不收取任何费用</p><a class="touchOther" style="display:inline-block;text-align:center;margin-top:6px;margin-left:-15px;line-height:30px;font-size:14px;color:rgb(18,120,227)" href="">投诉与建议</a></div></div>\
-                </dd>\
-              </dl>\
-              </div>')
-
-            $(document).on('touchstart','.touchOther',function(){
-              var  isApp = weddingCard.getUrlParams(),
-                   isAppState = isApp['is_app'];
-                   if(isAppState){
-                      location.href = "/p/wedding/Public/wap/invitationCard/feedBack/#/index/"+weddingCard.cardId+'?is_app=true'
-                   }else{
-                      location.href = "/p/wedding/Public/wap/invitationCard/feedBack/#/index/"+weddingCard.cardId
-                   }
-
-            })
-
-            if(weddingCard.getCookie('cashGiftName')){
-              $('.rpyName02').val(weddingCard.cashGiftName)
-            }
-            var fbTop=weddingCard.winW*0.63;
-            var _size = weddingCard.winH/weddingCard.winW;
-            $('.giftCol').css('line-height','150px')
-
-            if(_size<=1.52){//g5,mx
-              $('.feedback_new').css({'top':fbTop-60});
-              $('.area_gift').css({'width':'33%'})
-              $('.area-chat').css({'top':fbTop-120});
-              $('.gift-info').css({'height':100})
-              if(_size<=1.35){
-                $('.feedback_new').css({'top':fbTop-76});
-                $('.area-chat').css({'top':fbTop-140});
-                $('.gift-info').css({'height':90})
-              }else if(_size>1.3&&_size<1.45){
-                $('.gift-info').css({'height':80})
-                $('.fb_link button').css({'padding-left':'7px','padding-right':'7px'})
-                $('.icon-plumage').hide()
-                $('.icon-daohang').hide()
-              }
-              if(weddingCard.winW>410){
-                $('.fb_link button').css({'paddingLeft':33,'paddingRight':18})
-              }
-            }else if(_size>1.52&&_size<1.6){//xm,
-               $('.feedback_new').css({'top':fbTop-37});
-               $('.area-chat').css({'top':fbTop-102});
-               $('.area_gift').css({'width':'33%'})
-
-               if(weddingCard.winW<=320){//IP5
-                 $('.fb_form').css({'paddingTop':10})
-                 $('.gift-info').css({'height':90})
-
-                 $('.feedback_new').css({'top':fbTop-46});
-                 $('.area-chat').css({'top':fbTop-102});
-                 $('.fb_link button').css({'fontSize':12});
-
-                 $('.fb_form_lay.fb_s').css({'padding-bottom':0})
-                 $('.fb_link').css({'margin-top':5})
-                 $('.touchOther').css({'margin-top':0})
-               }
-
-            }else if(_size>1.6&&_size<1.63){//IP6PLUS
-              $('.feedback_new').css({'top':fbTop-37});
-              $('.area-chat').css({'top':fbTop-112});
-              $('.area_gift').css({'width':'33.3%'})
-              if(weddingCard.winW>380){
-                $('.fb_link button').css({'paddingLeft':33,'paddingRight':18})
-              }
-            }else{
-              $('.feedback_new').css({'top':fbTop});
-            }
-
-            $(document).on('touchstart','.rpy',function(){weddingCard.notouch = true
-              $('.rpy').removeClass('ipk')
-              $('.reply_name').blur()
-              $('.reply_wish').blur()
-              $(this).addClass('ipk')
-              var _css = weddingCard.eleCss.layout,
-                  _themeColor = _css.themeColor||'#ff705e';
-              $('.reply_state i.ipk').css({'color':_themeColor,'borderColor':_themeColor})
-              for(var r=0;r<$('.rpy').length;r++){
-                if(!$('.rpy').eq(r).hasClass('ipk')){
-                  $('.rpy').eq(r).css({'color':'#333','border':'none'})
-                }else{$('.rpy').eq(r).css({'border':'1px solid'})}
-              }
-              var _n = $('.reply_state i').index(this);
-                  weddingCard.replyData.state = _n;
-                  if(_n!=0){$('.fb_form_lay').eq(2).hide()}else{$('.fb_form_lay').eq(2).show()}
-            })
-            weddingCard.replyData.count='1';
-            $(document).on('touchstart','.reply_count i',function(e){weddingCard.notouch = true
-              if(!weddingCard.CountTouch){
-                 weddingCard.CountTouch = true
-                $('.reply_name').blur()
-                $('.reply_wish').blur()
-                var _i = $('.reply_count i').index(this),
-                _cite = $('.reply_count cite'),
-                _count = _cite.text();
-                switch(_i){
-                  case 0:
-                   _count=parseInt(_count)-1;
-                  break;
-                  case 1:
-                   _count=parseInt(_count)+1;
-                  break;
-                }
-                if(_count<=0){
-                  _count=0;
-                }
-                _cite.text(_count)
-                weddingCard.replyData.count = _count
-                setTimeout(function(){
-                  weddingCard.CountTouch = false
-                },100)
-              }
-
-            })
-
-
-            $(document).on('touchstart','.gift',function(){weddingCard.notouch = true
-              $('.reply_name').blur();
-              $('.gift').removeClass('gift_ko')
-              $(this).addClass('gift_ko')
-              var _css = weddingCard.eleCss.layout,
-                  _giftButton = _css.giftButton,
-                  _giftTxtColor='#ff705e',_giftTxtBtn='#ff705e';
-
-                  if(_giftButton&&_giftButton.textColor){
-                    _giftTxtColor = _giftButton.textColor
-                  }
-                  if(_giftButton&&_giftButton.fillColor){
-                    _giftTxtBtn = _giftButton.fillColor
-                  }
-
-                  $('.gift_ko').css({'color':_giftTxtColor,'border-color':_giftTxtBtn})
-
-                  weddingCard.giftId = $(this).attr('vid');
-                  weddingCard.giftPrice = $(this).attr('price');
-
-            })
-
-            $(document).on('touchstart','.tabtn',function(){weddingCard.notouch = true
-              var _i = $('.tabtn').index(this);
-              $('.tabtn').removeClass('spk');
-              $(this).addClass('spk');
-              $('.fb_lay').hide()
-              $('.fb_lay').eq(_i).show()
-
-              var _css = weddingCard.eleCss.layout,
-                  _themeColor = _css.themeColor||'#ff705e';
-
-                  switch(_i){
-                    case 0:
-                      $('.feedback_new dt span').css({'color':_themeColor,'border-color':_themeColor})
-                      $('.feedback_new dt span').eq(1).css({'color':_themeColor,'background':'#fff'})
-                      $('.spk').css({'color':'#fff','background':_themeColor});
-
-                    break;
-                    case 1:
-                      $('.feedback_new dt span').css({'color':_themeColor,'border-color':_themeColor})
-                      $('.feedback_new dt span').eq(0).css({'color':_themeColor,'background':'#fff'})
-                      $('.spk').css({'color':'#fff','background':_themeColor});
-                    break;
-                  }
-
-            })
-
-            $(document).on('touchend','.reply_name,.tabtn,.gift,.reply_count i,.reply_state i',function(){
-              weddingCard.notouch = false
-            })
-
-            $(document).on('touchstart','.reply_name',function(){
-              $('.reply_name').focus();
-              weddingCard.notouch = true
-            })
-            $(document).on('keyup','.rpyName01',function(){
-              weddingCard.replyData.name = $(this).val();
-              weddingCard.cashGiftName = $(this).val();
-            })
-
-            $(document).on('keyup','.rpyName02',function(){
-              weddingCard.giftName = $(this).val();
-            })
-
-            $(document).on('touchstart','.reply_wish',function(){
-              $('.reply_wish').focus();
-              weddingCard.notouch = true
-            })
-
-            $(document).on('blur','.reply_wish',function(){
-              weddingCard.wishCol = $(this).val()
-              if(weddingCard.wishCol==''){
-                  $('.reply_wish').attr('placeholder','')
-                }
-            })
-
-            weddingCard.giftCommentData()
-            weddingCard.cssUi()
-            weddingCard.ajaxGift()//send reply
         }
 
         weddingCard.replyData={

@@ -855,6 +855,7 @@
 
         weddingCard.module = function(result){
           if(result.data.music&&result.data.music!=''){
+            return;
               var _music = result.data.music;
               if(_music.img){
                 weddingCard.musicBtn = _music.img;
