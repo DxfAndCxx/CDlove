@@ -16,12 +16,7 @@
   <link rel="stylesheet" href="static/css/wrap_common.css">
   <link rel="stylesheet" href="static/css/animate_v05.28.css">
   <link rel="stylesheet" href="static/css/main.css">
-  <link rel="icon" href="static/images/2_1.jpg" type="image/x-icon">
-
-  <div id='wx_pic' style='margin:0 auto;display:none;'>
-    <img src='static/images/pic300.jpg' />
-  </div>
-
+  <link rel="icon" href="http://cdn.fengidri.me/dxf_cxx/marry/album/common/2_1.jpg" type="image/x-icon">
   <style>
    body {background:#000}
     #wrap {margin:auto;}
@@ -261,15 +256,15 @@
   </style>
 </head>
 <body>
-    <img class="goFirst" src="static/images/goFirst.png"/>
+    <img class="goFirst" src="http://cdn.fengidri.me/dxf_cxx/marry/album/common/goFirst.png"/>
     <div class="loadmore-loading"><div></div><p></p></div>
     <div id="wrap">
         <div class="wrap-main"></div>
     </div>
     <div class="arrow-icon">
-        <img src="static/images/arrow.png">
+        <img src="http://cdn.fengidri.me/dxf_cxx/marry/album/common/arrow.png">
     </div>
-    <div id="playBtn" class="playing"><img src="static/images/playBtn"></div>
+    <div id="playBtn" class="playing"><img src="http://cdn.fengidri.me/dxf_cxx/marry/album/common/playBtn.png"></div>
     <script src="static/js/app.js"></script>
     <script src="static/js/zepto.js"></script>
     <script src="static/js/jweixin-1.0.0.js"></script>
@@ -286,7 +281,7 @@
           if($('#playBtn').hasClass('rotate')){
                   document.querySelector('#playMusic').pause();
                   $('#playBtn').removeClass('rotate');
-                  document.getElementById('playBtn').innerHTML='<img src="static/images/playBtn.png" />';
+                  document.getElementById('playBtn').innerHTML='<img src="http://cdn.fengidri.me/dxf_cxx/marry/album/common/playBtn.png" />';
                   weddingCard.auto = 1;
                 }
         }
@@ -1399,18 +1394,20 @@
                          $('.lay-slide-cont').show();
                           $('#wrap').show();
                           $('.loadmore-loading').hide();
+                          /*
+                          // 使用默认播放按钮
                           if(weddingCard.pageIcon){
                             $('.arrow-icon img').attr({'src': URL_PREFIX + weddingCard.pageIcon});
-                            $('.arrow-icon').show()
-                          }else{$('.arrow-icon').show()}
-                      },2000)
+                          }*/
+                          $('.arrow-icon').show();
+                      },1)
                   })
                   action();
 
                   (function() {//weixin auto playmusic
-                      // WeixinJSBridge.invoke('getNetworkType', {}, function(e) {
-                      //         document.getElementById('playMusic').play();
-                      //     });
+                      WeixinJSBridge.invoke('getNetworkType', {}, function(e) {
+                              document.getElementById('playMusic').play();
+                          });
                   })()
         }
 
@@ -1924,7 +1921,13 @@
           }
 
         }
-
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?70f26e1253bac08e9ab8816ba3470962";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
 
  </script>
 
